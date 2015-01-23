@@ -1,0 +1,22 @@
+message person{
+	optional string name = 1;
+}
+
+message EchoRequest
+{
+      required string s1 = 1;
+	  optional int32 i3 = 3;
+	  optional int64 i4 = 4;
+	  optional bool b13 = 13;
+	  optional string s14 = 14;
+	  optional bytes b15 = 15;
+	  repeated string rs16 = 16;
+	  optional person p17 = 17;
+}
+
+message EchoResponse
+{
+      required string response = 1;
+      optional int64 result = 2;
+}
+

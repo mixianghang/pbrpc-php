@@ -1,0 +1,257 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+PBBool	./protobuf_php5.2_lib/message/type/pb_bool.php	/^class PBBool extends PBInt$/;"	c
+PBBytes	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^class PBBytes extends PBScalar$/;"	c
+PBEnum	./protobuf_php5.2_lib/message/type/pb_enum.php	/^class PBEnum extends PBScalar$/;"	c
+PBInputReader	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^abstract class PBInputReader$/;"	c
+PBInputStringReader	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^class PBInputStringReader extends PBInputReader$/;"	c
+PBInt	./protobuf_php5.2_lib/message/type/pb_int.php	/^class PBInt extends PBScalar$/;"	c
+PBMessage	./protobuf_php5.2_lib/message/pb_message.php	/^abstract class PBMessage$/;"	c
+PBParser	./protobuf_php5.2_lib/parser/pb_parser.php	/^class PBParser$/;"	c
+PBScalar	./protobuf_php5.2_lib/message/type/pb_scalar.php	/^class PBScalar extends PBMessage$/;"	c
+PBSignedInt	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^class PBSignedInt extends PBScalar$/;"	c
+PBString	./protobuf_php5.2_lib/message/type/pb_string.php	/^class PBString extends PBScalar$/;"	c
+ParseFromArray	./protobuf_php5.2_lib/message/pb_message.php	/^    public function ParseFromArray()$/;"	f
+ParseFromArray	./protobuf_php5.2_lib/message/type/pb_bool.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./protobuf_php5.2_lib/message/type/pb_enum.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./protobuf_php5.2_lib/message/type/pb_int.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./protobuf_php5.2_lib/message/type/pb_string.php	/^	public function ParseFromArray()$/;"	f
+ParseFromString	./protobuf_php5.2_lib/message/pb_message.php	/^    public function ParseFromString($message)$/;"	f
+Send	./protobuf_php5.2_lib/message/pb_message.php	/^    public function Send($url, &$class = null)$/;"	f
+SerializeToString	./protobuf_php5.2_lib/message/pb_message.php	/^    public function SerializeToString($rec=-1)$/;"	f
+SerializeToString	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^	public function SerializeToString($rec = -1)$/;"	f
+SerializeToString	./protobuf_php5.2_lib/message/type/pb_enum.php	/^	public function SerializeToString($rec=-1)$/;"	f
+SerializeToString	./protobuf_php5.2_lib/message/type/pb_int.php	/^	public function SerializeToString($rec=-1)$/;"	f
+SerializeToString	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^	public function SerializeToString($rec=-1)$/;"	f
+SerializeToString	./protobuf_php5.2_lib/message/type/pb_string.php	/^	public function SerializeToString($rec = -1)$/;"	f
+_ParseFromArray	./protobuf_php5.2_lib/message/pb_message.php	/^    private function _ParseFromArray($length=99999999)$/;"	f
+__construct	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    public function __construct($modus)$/;"	f
+__construct	./protobuf_php5.2_lib/message/pb_message.php	/^    public function __construct($reader=null)$/;"	f
+__construct	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	public function __construct()$/;"	f
+__construct	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^	public function __construct($string)$/;"	f
+__construct	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $string .= "  public function __construct(" . '$reader=null'  . ")\\n  {\\n";$/;"	f
+__destruct	./protobuf_php5.2_lib/message/pb_message.php	/^    public function __destruct()$/;"	f
+_add_arr_value	./protobuf_php5.2_lib/message/pb_message.php	/^    protected function _add_arr_value($index)$/;"	f
+_begin	./protobuf_php5.2_lib/message/pb_message.php	/^        $_begin = $this->reader->get_pointer();$/;"	v
+_check_type	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _check_type($type, $array, $path)$/;"	f
+_classtype	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $_classtype = $classtype;$/;"	v
+_create_class_body	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _create_class_body($classfile, &$string, $classname)$/;"	f
+_create_class_constructor	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _create_class_constructor($classfile, &$string, $classname)$/;"	f
+_create_class_definition	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _create_class_definition($classfile, &$string)$/;"	f
+_create_class_file	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _create_class_file($filename)$/;"	f
+_d_string	./protobuf_php5.2_lib/message/pb_message.php	/^        $this->_d_string = '';$/;"	v
+_d_string	./protobuf_php5.2_lib/message/pb_message.php	/^    var $_d_string = '';$/;"	v
+_get_arr_size	./protobuf_php5.2_lib/message/pb_message.php	/^    protected function _get_arr_size($index)$/;"	f
+_get_arr_value	./protobuf_php5.2_lib/message/pb_message.php	/^    protected function _get_arr_value($index, $value)$/;"	f
+_get_begin_end	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _get_begin_end($string, $char, $charend)$/;"	f
+_get_type	./protobuf_php5.2_lib/parser/pb_parser.php	/^	private function _get_type($field)$/;"	f
+_get_value	./protobuf_php5.2_lib/message/pb_message.php	/^    protected function _get_value($index)$/;"	f
+_next	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _next($string, $reg = false)$/;"	f
+_offset	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $_offset = $offset_close+1;$/;"	v
+_offset	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $_offset = $offset_open+1;$/;"	v
+_offset	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $_offset = -1;$/;"	v
+_offset	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $_offset = $offset_begin + 1;$/;"	v
+_offset_number	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $_offset_number = 1;$/;"	v
+_oldpointer	./protobuf_php5.2_lib/message/pb_message.php	/^                $_oldpointer = $this->reader->get_pointer();$/;"	v
+_parse_enum	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _parse_enum($content)$/;"	f
+_parse_field	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _parse_field($content, $array, $path)$/;"	f
+_parse_message_type	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _parse_message_type(&$string, $m_name, $path = '')$/;"	f
+_remove_last_arr_value	./protobuf_php5.2_lib/message/pb_message.php	/^    protected function _remove_last_arr_value($index)$/;"	f
+_save_string	./protobuf_php5.2_lib/message/pb_message.php	/^    protected function _save_string($ch, $string)$/;"	f
+_serialize_chunk	./protobuf_php5.2_lib/message/pb_message.php	/^    public function _serialize_chunk(&$stringinner)$/;"	f
+_set_arr_value	./protobuf_php5.2_lib/message/pb_message.php	/^    protected function _set_arr_value($index, $index_arr, $value)$/;"	f
+_set_value	./protobuf_php5.2_lib/message/pb_message.php	/^    protected function _set_value($index, $value)$/;"	f
+_strip_comments	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _strip_comments(&$string)$/;"	f
+add_	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function add_' .  $field['value']['name'] . '()' . "\\n  {\\n";$/;"	f
+add_pointer	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	public function add_pointer($add)$/;"	f
+apath	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $apath = explode(".", $path);$/;"	v
+append_	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function append_' .  $field['value']['name'] . '($value)' . "\\n  {\\n";$/;"	f
+base128	./protobuf_php5.2_lib/message/pb_message.php	/^        $this->base128 = new base128varint(PBMessage::MODUS);$/;"	v
+base128	./protobuf_php5.2_lib/message/pb_message.php	/^    var $base128;$/;"	v
+base128	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^		$this->base128 = new base128varint(1);$/;"	v
+base128	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	protected $base128;$/;"	v
+base128varint	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^class base128varint$/;"	c
+binstring	./protobuf_php5.2_lib/message/pb_message.php	/^        $binstring = decbin($number);$/;"	v
+body	./protobuf_php5.2_lib/parser/pb_parser.php	/^            \/\/ now create the class body with all set and get functions$/;"	c
+body	./protobuf_php5.2_lib/parser/pb_parser.php	/^     * Creates the class body with functions for each field$/;"	c
+byte	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			$byte = ord($string);$/;"	v
+c_types	./protobuf_php5.2_lib/parser/pb_parser.php	/^    var $c_types = array();$/;"	v
+ch	./protobuf_php5.2_lib/message/pb_message.php	/^        $ch = curl_init();$/;"	v
+chunk	./protobuf_php5.2_lib/message/pb_message.php	/^        $this->chunk = '';$/;"	v
+chunk	./protobuf_php5.2_lib/message/pb_message.php	/^    var $chunk = '';$/;"	v
+classname	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $classname = str_replace(".", "_", $classfile['name']);$/;"	v
+classtype	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $classtype = $this->scalar_types[$classtype];$/;"	v
+classtype	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $classtype = str_replace('.', '_', $field['value']['namespace']);$/;"	v
+classtype	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $classtype = "";$/;"	v
+classtype	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $classtype = $field['value']['type'];$/;"	v
+classtype	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $classtype = str_replace(".", "_", $classtype);$/;"	v
+constructor	./protobuf_php5.2_lib/parser/pb_parser.php	/^     * Creates the class constructor$/;"	c
+consume	./protobuf_php5.2_lib/message/pb_message.php	/^                    $consume = new PBInt($this->reader);$/;"	v
+consume	./protobuf_php5.2_lib/message/pb_message.php	/^                    $consume = new PBString($this->reader);$/;"	v
+content	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $content = trim(substr($string, $offset['begin'] + 1, $offset['end'] - $offset['begin'] - 2));$/;"	v
+content	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $content = trim(substr($content, 0, $matches[0][1])) . ';';$/;"	v
+content	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $content = trim(substr($content, 0, $matches[0][1]));$/;"	v
+content	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $content = trim(substr($content, strlen($name)));$/;"	v
+content	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $content = trim(trim(trim($content), ';'));$/;"	v
+content_length	./protobuf_php5.2_lib/message/pb_message.php	/^        $content_length = strlen($this->_d_string);$/;"	v
+definitions	./protobuf_php5.2_lib/parser/pb_parser.php	/^     * Creates the class definitions$/;"	c
+fields	./protobuf_php5.2_lib/message/pb_message.php	/^    var $fields = array();$/;"	v
+file	./protobuf_php5.2_lib/parser/pb_parser.php	/^     * Creates php class file for the proto file$/;"	c
+filename	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $filename = $filename[count($filename) - 1];$/;"	v
+filename	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $filename = explode("\/", $protofile);$/;"	v
+for	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^ * Abstract class for an input reader$/;"	c
+get_message_from	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	public function get_message_from($from)$/;"	f
+get_pointer	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	public function get_pointer()$/;"	f
+get_types	./protobuf_php5.2_lib/message/pb_message.php	/^    public function get_types($number)$/;"	f
+get_value	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    public function get_value($string)$/;"	f
+get_value	./protobuf_php5.2_lib/message/type/pb_scalar.php	/^	public function get_value()$/;"	f
+hex_to_str	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    public function hex_to_str($hex)$/;"	f
+hexstring	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^                $hexstring = '0' . $hexstring;$/;"	v
+hexstring	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^            $hexstring = dechex(bindec($string));$/;"	v
+hexstring	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $hexstring = '';$/;"	v
+high	./protobuf_php5.2_lib/message/pb_message.php	/^        $high = substr($binstring,0, strlen($binstring) - 3) . '0000';$/;"	v
+i	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $i = 1;$/;"	v
+index	./protobuf_php5.2_lib/message/pb_message.php	/^                $index = count($this->values[$messtypes['field']]) - 1;$/;"	v
+index	./protobuf_php5.2_lib/message/pb_message.php	/^        foreach ($this->fields as $index => $field)$/;"	v
+is_string	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			if ($value >= 10000000 && $is_string == false)$/;"	v
+length	./protobuf_php5.2_lib/message/pb_message.php	/^        $length = $this->reader->next();$/;"	v
+length	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^		$this->length = strlen($string);$/;"	v
+length	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^ var $length = 0;$/;"	v
+length	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$length = $this->reader->next();$/;"	v
+length	./protobuf_php5.2_lib/message/type/pb_string.php	/^		$length = $this->reader->next();$/;"	v
+low	./protobuf_php5.2_lib/message/pb_message.php	/^        $low = substr($binstring, strlen($binstring) - 3, strlen($binstring));$/;"	v
+m_types	./protobuf_php5.2_lib/parser/pb_parser.php	/^    var $m_types = array();$/;"	v
+match	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $match = preg_match('\/(.*);\\s?\/', $string, $matches, PREG_OFFSET_CAPTURE);$/;"	v
+match	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $match = preg_match('\/([^\\s^\\{}]*)\/', $string, $matches, PREG_OFFSET_CAPTURE);$/;"	v
+match	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $match = preg_match('\/=\\s(.*);\/', $content, $matches, PREG_OFFSET_CAPTURE);$/;"	v
+match	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $match = preg_match('\/\\[\\s?default\\s?=\\s?([^\\[]*)\\]\\s?;\/', $content, $matches, PREG_OFFSET_CAPTURE);$/;"	v
+match	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $match = preg_match_all('\/(.*);\\s?\/', $content, $matches);$/;"	v
+matches	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $matches = $this->_next($content, true);$/;"	v
+messtypes	./protobuf_php5.2_lib/message/pb_message.php	/^            $messtypes = $this->get_types($next);$/;"	v
+modus	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $this->modus = $modus;$/;"	v
+modus	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    var $modus = 1;$/;"	v
+myarray	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $myarray = array();$/;"	v
+name	./protobuf_php5.2_lib/message/pb_message.php	/^            foreach ($this->fields as $name => $value)$/;"	v
+name	./protobuf_php5.2_lib/message/pb_message.php	/^            foreach ($this->values as $name => $value)$/;"	v
+name	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $name = $this->_next($string);$/;"	v
+name	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $name = $matches[0][0];$/;"	v
+name	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $name = explode('.', $filename);$/;"	v
+name	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $name = join($name, '.');$/;"	v
+name2	./protobuf_php5.2_lib/message/pb_message.php	/^                    foreach ($value as $name2 => $value2)$/;"	v
+namespace	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $namespace = trim(trim(join($apath, '.'), '.') . '.' . $type, '.');$/;"	v
+namespace	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $namespace  = trim($path . '.' . $namespace, '.');$/;"	v
+namespace	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $namespace = $type;$/;"	v
+namespace	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $namespace = '';$/;"	v
+newstring	./protobuf_php5.2_lib/message/pb_message.php	/^                    $newstring = '';$/;"	v
+newstring	./protobuf_php5.2_lib/message/pb_message.php	/^                $newstring = '';$/;"	v
+next	./protobuf_php5.2_lib/message/pb_message.php	/^            $next = $this->reader->next();$/;"	v
+next	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^    public abstract function next();$/;"	f
+next	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^    public function next($is_string = false)$/;"	f
+next	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $next = ($this->_next($string));$/;"	v
+not	./protobuf_php5.2_lib/message/pb_message.php	/^    \/\/ chunk which the class not understands$/;"	c
+offset	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $offset = $this->_get_begin_end($string, "{", "}");$/;"	v
+offset_begin	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $offset_begin = strpos($string, $char);$/;"	v
+offset_close	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $offset_close = strpos($string, $charend, $_offset);$/;"	v
+offset_open	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $offset_open = strpos($string, $char, $_offset);$/;"	v
+package	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^        $package = '';$/;"	v
+parse	./protobuf_php5.2_lib/parser/pb_parser.php	/^    public function parse($protofile)$/;"	f
+path	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _parse_message_type(&$string, $m_name, $path = '')$/;"	v
+phpver	./protoc.php	/^$phpver = explode(".",phpversion());$/;"	v
+pointer	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	protected $pointer = 0;$/;"	v
+pointer	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$pointer = $this->reader->get_pointer();$/;"	v
+pointer	./protobuf_php5.2_lib/message/type/pb_string.php	/^		$pointer = $this->reader->get_pointer();$/;"	v
+pre	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^                $pre = '0';$/;"	v
+pre	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^            $pre = '1';$/;"	v
+pre	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $pre = '1';$/;"	v
+proto	./protoc.php	/^    $proto = new PBParser();$/;"	v
+reader	./protobuf_php5.2_lib/message/pb_message.php	/^        $this->reader = $reader;$/;"	v
+reader	./protobuf_php5.2_lib/message/pb_message.php	/^        $this->reader = new PBInputStringReader($message);$/;"	v
+reader	./protobuf_php5.2_lib/message/pb_message.php	/^    protected $reader;$/;"	v
+reg	./protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _next($string, $reg = false)$/;"	v
+remove_last_	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function remove_last_' .  $field['value']['name'] . '()' . "\\n  {\\n";$/;"	f
+result	./protobuf_php5.2_lib/message/pb_message.php	/^        $result = curl_exec($ch);$/;"	v
+result	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^        $result = $shift = 0;$/;"	v
+save	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$save = $this->value;$/;"	v
+saved	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$saved = $this->value;$/;"	v
+scalar_types	./protobuf_php5.2_lib/parser/pb_parser.php	/^    var $scalar_types = array('double', 'float', 'int32' => 'PBInt', 'int64' => 'PBInt',$/;"	v
+set_	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function set_' .  $field['value']['name'] . '($index, $value)' . "\\n  {\\n";$/;"	f
+set_	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function set_' .  $field['value']['name'] . '($value)' . "\\n  {\\n";$/;"	f
+set_value	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    public function set_value($number)$/;"	f
+set_value	./protobuf_php5.2_lib/message/type/pb_scalar.php	/^	public function set_value($value)$/;"	f
+split	./protobuf_php5.2_lib/parser/pb_parser.php	/^            $split = explode("=", $match);$/;"	v
+str	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $str = '';$/;"	v
+string	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^                $string = substr('00000000', 0, 7 - strlen($string) % 7) . $string;$/;"	v
+string	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^            $string = substr($string, 0, strlen($string) - 7);$/;"	v
+string	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $string = decbin($number);$/;"	v
+string	./protobuf_php5.2_lib/message/pb_message.php	/^        $string = '';$/;"	v
+string	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	protected $string = '';$/;"	v
+string	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			$string = $this->string[$this->pointer];	        $/;"	v
+string	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			$string = '';$/;"	v
+string	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^		$this->string = $string;$/;"	v
+string	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$string = '';$/;"	v
+string	./protobuf_php5.2_lib/message/type/pb_enum.php	/^		$string = '';$/;"	v
+string	./protobuf_php5.2_lib/message/type/pb_int.php	/^		$string = '';$/;"	v
+string	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$string = parent::SerializeToString($rec);$/;"	v
+string	./protobuf_php5.2_lib/message/type/pb_string.php	/^		$string = '';$/;"	v
+string	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string = '' . trim(substr($string, $offset['end']));$/;"	v
+string	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string = trim(substr($string, $matches[0][1] + strlen($matches[0][0])));$/;"	v
+string	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string = trim(substr($string, strlen($next)));$/;"	v
+string	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = '';$/;"	v
+string	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = file_get_contents($protofile);$/;"	v
+string	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = preg_replace('\/\\\/\\\/.+\/', '', $string);$/;"	v
+string	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = preg_replace('\/\\\\r?\\\\n\\s*\/', "\\n", $string);$/;"	v
+string	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = trim($string);$/;"	v
+string_array	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $string_array = array();$/;"	v
+string_length	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $string_length = strlen($string);$/;"	v
+stringinner	./protobuf_php5.2_lib/message/pb_message.php	/^            $stringinner = $this->base128->set_value(strlen($stringinner) \/ PBMessage::MODUS) . $stringinner;$/;"	v
+stringinner	./protobuf_php5.2_lib/message/pb_message.php	/^        $stringinner = '';$/;"	v
+type	./protobuf_php5.2_lib/parser/pb_parser.php	/^			    										|| $type == 'PBEnum') )$/;"	v
+type	./protobuf_php5.2_lib/parser/pb_parser.php	/^        	$type = $this->_get_type($field);$/;"	v
+type	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $type = $this->_check_type($name, $array, $path);$/;"	v
+types	./protobuf_php5.2_lib/message/pb_message.php	/^        $types = array();$/;"	v
+typeset	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $typeset = true;$/;"	v
+typeset	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $typeset = false;$/;"	v
+v	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '    $v = $this->_add_arr_value("' . $field['value']['value'] . '");'  . "\\n";$/;"	v
+v	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '    $v = $this->_get_arr_value("' . $field['value']['value'] . '", $offset);'  . "\\n";$/;"	v
+v	./protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '    $v = new $this->fields["' . $field['value']['value'] . '"]();' . "\\n";$/;"	v
+value	./protobuf_php5.2_lib/message/pb_message.php	/^        $this->value = $this;$/;"	v
+value	./protobuf_php5.2_lib/message/pb_message.php	/^    var $value = null;$/;"	v
+value	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^				$value = substr('00000000', 0, 8 - strlen($value) % 8) . $value;$/;"	v
+value	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			$value = decbin(ord($string));$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_bool.php	/^		$this->value = $this->reader->next();$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_bool.php	/^		$this->value = ($this->value != 0) ? 1 : 0;$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$this->value = $this->reader->get_message_from($pointer);$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$this->value = '';$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_enum.php	/^		$this->value = $this->reader->next();$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_enum.php	/^		$value = $this->base128->set_value($this->value);$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_int.php	/^		$this->value = $this->reader->varint();$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_int.php	/^		$value = $this->base128->set_value($this->value);$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_scalar.php	/^		$this->value = $value;	$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^			$this->value = $this->value*2;$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^			$this->value = -($this->value);$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^			$this->value = abs($this->value)*2-1;$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$this->value = $save;$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$this->value = round($this->value \/ 2);$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_string.php	/^		$this->value = $this->reader->get_message_from($pointer);$/;"	v
+value	./protobuf_php5.2_lib/message/type/pb_string.php	/^		$this->value = '';$/;"	v
+values	./protobuf_php5.2_lib/message/pb_message.php	/^    var $values = array();$/;"	v
+valuestring	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^            $valuestring = substr($string, $i, 7) . $valuestring;$/;"	v
+valuestring	./protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $valuestring = '';$/;"	v
+varint	./protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^    public abstract function varint();    $/;"	f
+varint	./protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^    public function varint() {$/;"	f
+version	./protoc.php	/^$version = $phpver[0] * 100 + $phpver[1] * 10 ;$/;"	v
+where	./protobuf_php5.2_lib/message/pb_message.php	/^     * @param the PBMessage class where the request should be encoded$/;"	c
+wired_type	./protobuf_php5.2_lib/message/pb_message.php	/^    var $wired_type = 2;$/;"	v
+wired_type	./protobuf_php5.2_lib/message/type/pb_bool.php	/^	var $wired_type = PBMessage::WIRED_VARINT;$/;"	v
+wired_type	./protobuf_php5.2_lib/message/type/pb_bytes.php	/^	var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;$/;"	v
+wired_type	./protobuf_php5.2_lib/message/type/pb_enum.php	/^	var $wired_type = PBMessage::WIRED_VARINT;$/;"	v
+wired_type	./protobuf_php5.2_lib/message/type/pb_int.php	/^	var $wired_type = PBMessage::WIRED_VARINT;$/;"	v
+wired_type	./protobuf_php5.2_lib/message/type/pb_signed_int.php	/^	var $wired_type = PBMessage::WIRED_VARINT;$/;"	v
+wired_type	./protobuf_php5.2_lib/message/type/pb_string.php	/^	var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;$/;"	v
+wired_type	./protobuf_php5.2_lib/parser/pb_parser.php	/^        $string .= '  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;' . "\\n";$/;"	v

@@ -1,0 +1,805 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CPHPRPCSocketWrapper	./src/Socket.php	/^class CPHPRPCSocketWrapper$/;"	c
+CallMethod	./src/php5.2/RpcChannel.php	/^    public function CallMethod(&$controller,$request,&$response,$closure) {$/;"	f
+Connection	./include/connectpool/Connection.class.php	/^abstract class Connection$/;"	c
+ConnectionMan	./include/connectpool/ConnectionMan.class.php	/^class ConnectionMan$/;"	c
+ConnectionManInc	./include/connectpool/ConnectionManInc.class.php	/^class ConnectionManInc$/;"	c
+ConnectionMysqli	./include/connectpool/ConnectionMysqli.class.php	/^class ConnectionMysqli extends Connection$/;"	c
+ConnectionSocket	./include/connectpool/ConnectionSocket.class.php	/^class ConnectionSocket extends Connection$/;"	c
+EchoRequest	./bin/echo.php	/^class EchoRequest extends PBMessage$/;"	c
+EchoRequest	./unittest/php5.2/echo.php	/^class EchoRequest extends PBMessage$/;"	c
+EchoResponse	./bin/echo.php	/^class EchoResponse extends PBMessage$/;"	c
+EchoResponse	./unittest/php5.2/echo.php	/^class EchoResponse extends PBMessage$/;"	c
+Fail	./src/RpcController.php	/^	public function Fail(){$/;"	f
+Message	./src/php5.2/PbProtocol.php	/^	 * @param [in] $request : class Message$/;"	c
+Message	./src/php5.2/PbProtocol.php	/^	 * @param [in] $response : class Message$/;"	c
+Message	./src/php5.2/RpcChannel.php	/^	 * @param [in] $request : class Message$/;"	c
+Message	./src/php5.2/RpcChannel.php	/^	 * @param [in] $response : class Message$/;"	c
+Message	./src/php5.2/RpcTransport.php	/^	 * @param [in and out] $response : class Message$/;"	c
+PBBool	./bin/protobuf_php5.2_lib/message/type/pb_bool.php	/^class PBBool extends PBInt$/;"	c
+PBBytes	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^class PBBytes extends PBScalar$/;"	c
+PBEnum	./bin/protobuf_php5.2_lib/message/type/pb_enum.php	/^class PBEnum extends PBScalar$/;"	c
+PBInputReader	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^abstract class PBInputReader$/;"	c
+PBInputStringReader	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^class PBInputStringReader extends PBInputReader$/;"	c
+PBInt	./bin/protobuf_php5.2_lib/message/type/pb_int.php	/^class PBInt extends PBScalar$/;"	c
+PBMessage	./bin/protobuf_php5.2_lib/message/pb_message.php	/^abstract class PBMessage$/;"	c
+PBParser	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^class PBParser$/;"	c
+PBScalar	./bin/protobuf_php5.2_lib/message/type/pb_scalar.php	/^class PBScalar extends PBMessage$/;"	c
+PBSignedInt	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^class PBSignedInt extends PBScalar$/;"	c
+PBString	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^class PBString extends PBScalar$/;"	c
+ParseFromArray	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    public function ParseFromArray()$/;"	f
+ParseFromArray	./bin/protobuf_php5.2_lib/message/type/pb_bool.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./bin/protobuf_php5.2_lib/message/type/pb_enum.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./bin/protobuf_php5.2_lib/message/type/pb_int.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^	public function ParseFromArray()$/;"	f
+ParseFromArray	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^	public function ParseFromArray()$/;"	f
+ParseFromString	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    public function ParseFromString($message)$/;"	f
+PbProtocol	./src/php5.2/PbProtocol.php	/^class PbProtocol implements Protocol {$/;"	c
+PbProtocol	./src/php5.2/RpcChannel.php	/^	 * @param [in] $protocol : class PbProtocol$/;"	c
+PbProtocol	./src/php5.2/RpcChannel.php	/^    private $protocol;                     \/\/协议层            class PbProtocol$/;"	c
+Protocol	./src/Protocol.php	/^interface Protocol {$/;"	i
+RequestBody	./src/php5.2/protocol_phpv5.2.php	/^class RequestBody extends PBMessage$/;"	c
+RequestHead	./src/php5.2/protocol_phpv5.2.php	/^class RequestHead extends PBMessage$/;"	c
+ResponseBody	./src/php5.2/protocol_phpv5.2.php	/^class ResponseBody extends PBMessage$/;"	c
+ResponseHead	./src/php5.2/protocol_phpv5.2.php	/^class ResponseHead extends PBMessage$/;"	c
+RpcChannel	./src/php5.2/RpcChannel.php	/^class RpcChannel{$/;"	c
+RpcClosure	./src/RpcClosure.php	/^class RpcClosure{$/;"	c
+RpcClosure	./src/php5.2/RpcChannel.php	/^	 * @param [in] $closure : class RpcClosure$/;"	c
+RpcController	./src/RpcController.php	/^class RpcController{$/;"	c
+RpcController	./src/php5.2/PbProtocol.php	/^	 * @param $controller : class RpcController$/;"	c
+RpcController	./src/php5.2/RpcChannel.php	/^	 * @param [in] $controller : class RpcController$/;"	c
+RpcController	./src/php5.2/RpcTransport.php	/^	 * @param [in and out] $controller : class RpcController$/;"	c
+RpcErrorno	./src/RpcErrorno.php	/^class RpcErrorno{$/;"	c
+RpcErrorno	./src/php5.2/RpcChannel.php	/^    private $errorHandler;                 \/\/错误处理          class RpcErrorno$/;"	c
+RpcErrorno	./src/php5.2/RpcTransport.php	/^	private $errorHandler;			  \/\/错误处理         class RpcErrorno$/;"	c
+RpcRequest	./src/php5.2/RpcTransport.php	/^	 * @param [in] $request : class RpcRequest$/;"	c
+RpcRequest	./src/php5.2/protocol_phpv5.2.php	/^class RpcRequest extends PBMessage$/;"	c
+RpcResponse	./src/php5.2/RpcTransport.php	/^	 * @return success : class RpcResponse | fail : false$/;"	c
+RpcResponse	./src/php5.2/protocol_phpv5.2.php	/^class RpcResponse extends PBMessage$/;"	c
+RpcTransport	./src/php5.2/RpcChannel.php	/^    private $transport;                    \/\/传输层            class RpcTransport$/;"	c
+RpcTransport	./src/php5.2/RpcTransport.php	/^class RpcTransport implements Transport {$/;"	c
+Run	./src/RpcClosure.php	/^	public function Run(){$/;"	f
+Send	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    public function Send($url, &$class = null)$/;"	f
+SerializeToString	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    public function SerializeToString($rec=-1)$/;"	f
+SerializeToString	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^	public function SerializeToString($rec = -1)$/;"	f
+SerializeToString	./bin/protobuf_php5.2_lib/message/type/pb_enum.php	/^	public function SerializeToString($rec=-1)$/;"	f
+SerializeToString	./bin/protobuf_php5.2_lib/message/type/pb_int.php	/^	public function SerializeToString($rec=-1)$/;"	f
+SerializeToString	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^	public function SerializeToString($rec=-1)$/;"	f
+SerializeToString	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^	public function SerializeToString($rec = -1)$/;"	f
+Strategy	./include/connectpool/Strategy.class.php	/^abstract class Strategy$/;"	c
+StrategySimple	./include/connectpool/StrategySimple.class.php	/^class StrategySimple extends Strategy$/;"	c
+StrategyState	./include/connectpool/StrategyState.class.php	/^class StrategyState extends Strategy$/;"	c
+TestRpcChannel	./unittest/php5.2/TestRpcChannel.php	/^class TestRpcChannel extends PHPUnit_Framework_TestCase {$/;"	c
+Transport	./src/Transport.php	/^interface Transport {$/;"	i
+Transport	./src/php5.2/PbProtocol.php	/^	 * @param [in] $transport : class Transport$/;"	c
+_ParseFromArray	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    private function _ParseFromArray($length=99999999)$/;"	f
+__construct	./bin/echo.php	/^  public function __construct($reader=null)$/;"	f
+__construct	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    public function __construct($modus)$/;"	f
+__construct	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    public function __construct($reader=null)$/;"	f
+__construct	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	public function __construct()$/;"	f
+__construct	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^	public function __construct($string)$/;"	f
+__construct	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $string .= "  public function __construct(" . '$reader=null'  . ")\\n  {\\n";$/;"	f
+__construct	./include/connectpool/Strategy.class.php	/^    public function __construct($arrConfig)$/;"	f
+__construct	./include/connectpool/StrategyState.class.php	/^    public function __construct($arrConfig)$/;"	f
+__construct	./src/RpcController.php	/^	function __construct(){$/;"	f
+__construct	./src/Socket.php	/^    public function __construct($/;"	f
+__construct	./src/php5.2/PbProtocol.php	/^	function __construct($transport){$/;"	f
+__construct	./src/php5.2/RpcChannel.php	/^	function __construct($conf){$/;"	f
+__construct	./src/php5.2/RpcTransport.php	/^	function __construct($conf){$/;"	f
+__construct	./src/php5.2/protocol_phpv5.2.php	/^  public function __construct($reader=null)$/;"	f
+__construct	./unittest/php5.2/echo.php	/^  public function __construct($reader=null)$/;"	f
+__constructor	./src/RpcClosure.php	/^	function __constructor($class,$done){$/;"	f
+__destruct	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    public function __destruct()$/;"	f
+__destruct	./src/Socket.php	/^    public function __destruct() {$/;"	f
+_add_arr_value	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected function _add_arr_value($index)$/;"	f
+_arrConfig	./include/connectpool/Strategy.class.php	/^        $this->_arrConfig = $arrConfig;$/;"	v
+_arrConfig	./include/connectpool/Strategy.class.php	/^    protected $_arrConfig = array();$/;"	v
+_arrConfig	./include/connectpool/StrategyState.class.php	/^        $this->_arrConfig = $arrConfig;$/;"	v
+_begin	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $_begin = $this->reader->get_pointer();$/;"	v
+_check_type	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _check_type($type, $array, $path)$/;"	f
+_classtype	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $_classtype = $classtype;$/;"	v
+_connection	./include/connectpool/ConnectionMan.class.php	/^    private static $_connection = null;$/;"	v
+_create_class_body	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _create_class_body($classfile, &$string, $classname)$/;"	f
+_create_class_constructor	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _create_class_constructor($classfile, &$string, $classname)$/;"	f
+_create_class_definition	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _create_class_definition($classfile, &$string)$/;"	f
+_create_class_file	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _create_class_file($filename)$/;"	f
+_curConnection	./include/connectpool/Connection.class.php	/^    protected $_curConnection = '';$/;"	v
+_currentIndex	./include/connectpool/Strategy.class.php	/^    protected $_currentIndex = false;$/;"	v
+_currentIndex	./include/connectpool/StrategySimple.class.php	/^        $this->_currentIndex = $index;$/;"	v
+_currentIndex	./include/connectpool/StrategyState.class.php	/^        $this->_currentIndex = $index;$/;"	v
+_d_string	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $this->_d_string = '';$/;"	v
+_d_string	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    var $_d_string = '';$/;"	v
+_errno	./include/connectpool/ConnectionMan.class.php	/^    private static $_errno = 0;$/;"	v
+_getConnectionInstance	./include/connectpool/ConnectionMan.class.php	/^    private static function _getConnectionInstance($strConnectionType)$/;"	f
+_getServerInfo	./include/connectpool/StrategyState.class.php	/^    private function _getServerInfo($arrServer)$/;"	f
+_getStrategyInstance	./include/connectpool/ConnectionMan.class.php	/^    private static function _getStrategyInstance($strStrategyName, $arrConfig)$/;"	f
+_get_arr_size	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected function _get_arr_size($index)$/;"	f
+_get_arr_value	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected function _get_arr_value($index, $value)$/;"	f
+_get_begin_end	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _get_begin_end($string, $char, $charend)$/;"	f
+_get_type	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^	private function _get_type($field)$/;"	f
+_get_value	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected function _get_value($index)$/;"	f
+_initServerInfo	./include/connectpool/StrategyState.class.php	/^    private function _initServerInfo($arrServer)$/;"	f
+_intConnectTimeoutUS	./src/Socket.php	/^        $this->_intConnectTimeoutUS = intval($intConnectTimeoutMS * 1000);$/;"	v
+_intConnectTimeoutUS	./src/Socket.php	/^    protected   $_intConnectTimeoutUS;$/;"	v
+_intReadTimeoutUS	./src/Socket.php	/^        $this->_intReadTimeoutUS    = intval($intReadTimeoutMS * 1000);$/;"	v
+_intReadTimeoutUS	./src/Socket.php	/^    protected   $_intReadTimeoutUS;$/;"	v
+_intRemotePort	./src/Socket.php	/^        $this->_intRemotePort       = intval($intRemotePort);$/;"	v
+_intRemotePort	./src/Socket.php	/^    protected   $_intRemotePort;$/;"	v
+_intWriteTimeoutUS	./src/Socket.php	/^        $this->_intWriteTimeoutUS   = intval($intWriteTimeoutMS * 1000);$/;"	v
+_intWriteTimeoutUS	./src/Socket.php	/^    protected   $_intWriteTimeoutUS;$/;"	v
+_isFirstSelect	./include/connectpool/Strategy.class.php	/^    protected $_isFirstSelect = 1;$/;"	v
+_isFirstSelect	./include/connectpool/StrategySimple.class.php	/^        $this->_isFirstSelect = 0;$/;"	v
+_isFirstSelect	./include/connectpool/StrategyState.class.php	/^        $this->_isFirstSelect = 0;$/;"	v
+_maxScore	./include/connectpool/StrategyState.class.php	/^        $this->_maxScore = isset($arrConfig["StrategyState_MAX_SCORE"]) ? $/;"	v
+_maxScore	./include/connectpool/StrategyState.class.php	/^    private $_maxScore;$/;"	v
+_minScore	./include/connectpool/StrategyState.class.php	/^        $this->_minScore = isset($arrConfig["StrategyState_MIN_SCORE"]) ? $/;"	v
+_minScore	./include/connectpool/StrategyState.class.php	/^    private $_minScore;$/;"	v
+_next	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _next($string, $reg = false)$/;"	f
+_offset	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $_offset = $offset_close+1;$/;"	v
+_offset	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $_offset = $offset_open+1;$/;"	v
+_offset	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $_offset = -1;$/;"	v
+_offset	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $_offset = $offset_begin + 1;$/;"	v
+_offset_number	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $_offset_number = 1;$/;"	v
+_oldpointer	./bin/protobuf_php5.2_lib/message/pb_message.php	/^                $_oldpointer = $this->reader->get_pointer();$/;"	v
+_parse_enum	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _parse_enum($content)$/;"	f
+_parse_field	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _parse_field($content, $array, $path)$/;"	f
+_parse_message_type	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _parse_message_type(&$string, $m_name, $path = '')$/;"	f
+_remove_last_arr_value	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected function _remove_last_arr_value($index)$/;"	f
+_save_string	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected function _save_string($ch, $string)$/;"	f
+_scoreAdd	./include/connectpool/StrategyState.class.php	/^        $this->_scoreAdd = isset($arrConfig["StrategyState_SCORE_ADD"]) ? $/;"	v
+_scoreAdd	./include/connectpool/StrategyState.class.php	/^    private $_scoreAdd;$/;"	v
+_scoreSub	./include/connectpool/StrategyState.class.php	/^        $this->_scoreSub = isset($arrConfig["StrategyState_SCORE_SUB"]) ? $/;"	v
+_scoreSub	./include/connectpool/StrategyState.class.php	/^    private $_scoreSub;$/;"	v
+_serialize_chunk	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    public function _serialize_chunk(&$stringinner)$/;"	f
+_server	./include/connectpool/Connection.class.php	/^    protected $_server = array();$/;"	v
+_set_arr_value	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected function _set_arr_value($index, $index_arr, $value)$/;"	f
+_set_value	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected function _set_value($index, $value)$/;"	f
+_sock	./src/Socket.php	/^            $this->_sock = $resource;$/;"	v
+_sock	./src/Socket.php	/^            $this->_sock = null;$/;"	v
+_sock	./src/Socket.php	/^        $this->_sock    = $resourceSock;$/;"	v
+_sock	./src/Socket.php	/^        $this->_sock    = fsockopen($this->_strRemoteHost, $this->_intRemotePort,$/;"	v
+_sock	./src/Socket.php	/^    protected   $_sock;$/;"	v
+_sock_clear	./src/Socket.php	/^            $this->_sock_clear = false;$/;"	v
+_sock_clear	./src/Socket.php	/^        $this->_sock_clear = true;$/;"	v
+_sock_clear	./src/Socket.php	/^    protected   $_sock_clear;$/;"	v
+_strRemoteHost	./src/Socket.php	/^        $this->_strRemoteHost       = trim($strRemoteHost);$/;"	v
+_strRemoteHost	./src/Socket.php	/^    protected   $_strRemoteHost;$/;"	v
+_strategy	./include/connectpool/ConnectionMan.class.php	/^    private static $_strategy = null;$/;"	v
+_strip_comments	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _strip_comments(&$string)$/;"	f
+_timeIntervalSec	./include/connectpool/StrategyState.class.php	/^        $this->_timeIntervalSec = isset($arrConfig["StrategyState_TIME_INTERVAL_SEC"]) ?$/;"	v
+_timeIntervalSec	./include/connectpool/StrategyState.class.php	/^    private $_timeIntervalSec;$/;"	v
+_transport	./src/php5.2/PbProtocol.php	/^		$this->_transport = $transport;$/;"	v
+_transport	./src/php5.2/PbProtocol.php	/^	private $_transport;                    \/\/传输层$/;"	v
+accept_charset	./src/php5.2/PbProtocol.php	/^		$this->accept_charset = "utf-8";$/;"	v
+accept_charset	./src/php5.2/PbProtocol.php	/^		$this->accept_charset = $accept_charset;$/;"	v
+accept_charset	./src/php5.2/PbProtocol.php	/^	private $accept_charset;                \/\/可接受的字符集$/;"	v
+accept_charset	./src/php5.2/protocol_phpv5.2.php	/^  function accept_charset()$/;"	f
+add_	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function add_' .  $field['value']['name'] . '()' . "\\n  {\\n";$/;"	f
+add_pointer	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	public function add_pointer($add)$/;"	f
+add_requestBody	./src/php5.2/protocol_phpv5.2.php	/^  function add_requestBody()$/;"	f
+add_responseBody	./src/php5.2/protocol_phpv5.2.php	/^  function add_responseBody()$/;"	f
+apath	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $apath = explode(".", $path);$/;"	v
+append_	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function append_' .  $field['value']['name'] . '($value)' . "\\n  {\\n";$/;"	f
+append_rs16	./bin/echo.php	/^  function append_rs16($value)$/;"	f
+append_rs16	./unittest/php5.2/echo.php	/^  function append_rs16($value)$/;"	f
+arrAuth	./include/connectpool/ConnectionMan.class.php	/^        $arrAuth = array();$/;"	v
+arrInfo	./include/connectpool/StrategyState.class.php	/^        $arrInfo = $this->_getServerInfo ($arrServer);$/;"	v
+arrInfo	./include/connectpool/StrategyState.class.php	/^        $arrInfo = $this->_getServerInfo($arrServer);$/;"	v
+arrInfo	./include/connectpool/StrategyState.class.php	/^        $arrInfo = $this->_getServerInfo($server);$/;"	v
+arrStrategy	./src/php5.2/RpcTransport.php	/^			$arrStrategy = $service['strategy'];$/;"	v
+arrStrategy	./src/php5.2/RpcTransport.php	/^		$arrStrategy = null;$/;"	v
+arrValue	./include/connectpool/StrategyState.class.php	/^            $arrValue = array ($/;"	v
+arrValue	./include/connectpool/StrategyState.class.php	/^        $arrValue = array ($/;"	v
+arrValue	./include/connectpool/StrategyState.class.php	/^        $arrValue = eaccelerator_get($strKey);$/;"	v
+b13	./bin/echo.php	/^  function b13()$/;"	f
+b13	./unittest/php5.2/echo.php	/^  function b13()$/;"	f
+b15	./bin/echo.php	/^  function b15()$/;"	f
+b15	./unittest/php5.2/echo.php	/^  function b15()$/;"	f
+balanceCode	./include/connectpool/Strategy.class.php	/^    abstract function selectServer($arrServers, $balanceCode=false);$/;"	v
+balanceCode	./src/php5.2/RpcTransport.php	/^			$balanceCode = $this->key;$/;"	v
+balanceCode	./src/php5.2/RpcTransport.php	/^			$balanceCode = rand();$/;"	v
+balanceCode	./src/php5.2/RpcTransport.php	/^		$balanceCode = $balanceCode % count($machineList);$/;"	v
+balanceCode	./src/php5.2/RpcTransport.php	/^		$balanceCode = 0;$/;"	v
+base128	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $this->base128 = new base128varint(PBMessage::MODUS);$/;"	v
+base128	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    var $base128;$/;"	v
+base128	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^		$this->base128 = new base128varint(1);$/;"	v
+base128	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	protected $base128;$/;"	v
+base128varint	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^class base128varint$/;"	c
+binstring	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $binstring = decbin($number);$/;"	v
+body	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            \/\/ now create the class body with all set and get functions$/;"	c
+body	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^     * Creates the class body with functions for each field$/;"	c
+bodylen	./src/php5.2/RpcTransport.php	/^		$bodylen = strlen($request);$/;"	v
+bolRes	./include/connectpool/StrategyState.class.php	/^            $bolRes = eaccelerator_put ($strKey,$arrInfo);$/;"	v
+bolRes	./include/connectpool/StrategyState.class.php	/^        $bolRes = eaccelerator_put ($strKey,$arrValue);$/;"	v
+bolRes	./include/connectpool/StrategyState.class.php	/^        $bolRes = eaccelerator_put($strKey,$arrInfo);$/;"	v
+bolRet	./include/connectpool/ConnectionMysqli.class.php	/^        $bolRet = @mysqli_real_connect($mysqli,$host,$dbuser,$dbpass,$dbname,$port);$/;"	v
+bolRet	./include/connectpool/ConnectionMysqli.class.php	/^        $bolRet = mysqli_options($mysqli,MYSQLI_OPT_CONNECT_TIMEOUT,$intTimeoutSec);$/;"	v
+byte	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			$byte = ord($string);$/;"	v
+c_types	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    var $c_types = array();$/;"	v
+ch	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $ch = curl_init();$/;"	v
+channel	./src/php5.2/RpcChannel.php	/^		$this->channel = $channel_name;$/;"	v
+channel	./unittest/php5.2/TestRpcChannel.php	/^        $this->channel = new RpcChannel($this->conf);$/;"	v
+channel	./unittest/php5.2/TestRpcChannel.php	/^        $this->channel = null;$/;"	v
+channel	./unittest/php5.2/TestRpcChannel.php	/^    private $channel;$/;"	v
+channelName	./src/php5.2/RpcChannel.php	/^    private $channelName;                  \/\/通讯管道名称      string$/;"	v
+channel_name	./src/RpcController.php	/^		$this->channel_name = "";$/;"	v
+channel_name	./src/RpcController.php	/^		$this->channel_name = $channel_name;$/;"	v
+channel_name	./src/RpcController.php	/^	private $channel_name;                 \/\/管道名称$/;"	v
+channel_name	./src/RpcController.php	/^        $this->channel_name = "";$/;"	v
+charset	./src/php5.2/PbProtocol.php	/^		$this->charset = "uft-8";$/;"	v
+charset	./src/php5.2/PbProtocol.php	/^		$this->charset = $charset;$/;"	v
+charset	./src/php5.2/PbProtocol.php	/^	private $charset;                       \/\/字符集$/;"	v
+charset	./src/php5.2/protocol_phpv5.2.php	/^  function charset()$/;"	f
+chunk	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $this->chunk = '';$/;"	v
+chunk	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    var $chunk = '';$/;"	v
+class	./src/RpcClosure.php	/^		$this->class = $class;$/;"	v
+class	./src/RpcClosure.php	/^	private $class;             \/\/类名$/;"	v
+classname	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $classname = str_replace(".", "_", $classfile['name']);$/;"	v
+classtype	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $classtype = $this->scalar_types[$classtype];$/;"	v
+classtype	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $classtype = str_replace('.', '_', $field['value']['namespace']);$/;"	v
+classtype	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $classtype = "";$/;"	v
+classtype	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $classtype = $field['value']['type'];$/;"	v
+classtype	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $classtype = str_replace(".", "_", $classtype);$/;"	v
+close	./src/Socket.php	/^    public function close() {$/;"	f
+code	./src/php5.2/protocol_phpv5.2.php	/^  function code()$/;"	f
+compress_type	./src/php5.2/protocol_phpv5.2.php	/^  function compress_type()$/;"	f
+conf	./unittest/php5.2/TestRpcChannel.php	/^        $this->conf = array( $/;"	v
+conf	./unittest/php5.2/TestRpcChannel.php	/^        $this->conf = null;$/;"	v
+conf	./unittest/php5.2/TestRpcChannel.php	/^    private $conf;$/;"	v
+configManager	./src/php5.2/RpcChannel.php	/^        $this->configManager = $conf;$/;"	v
+configManager	./src/php5.2/RpcChannel.php	/^    private $configManager;$/;"	v
+configManager	./src/php5.2/RpcTransport.php	/^		$this->configManager = $conf;$/;"	v
+configManager	./src/php5.2/RpcTransport.php	/^	private $configManager;           \/\/配置管理         array$/;"	v
+connect	./include/connectpool/Connection.class.php	/^    abstract function connect($server, $intTimeout, $arrAuth);$/;"	f
+connect	./include/connectpool/ConnectionMysqli.class.php	/^    function connect($server, $intTimeout, $arrAuth)$/;"	f
+connect	./include/connectpool/ConnectionSocket.class.php	/^    function connect($server, $intTimeout, $arrAuth)$/;"	f
+connect	./src/Socket.php	/^    public function connect($strRemoteHost = null, $intRemotePort = null) {$/;"	f
+connect_timeout_ms	./src/php5.2/RpcTransport.php	/^			$connect_timeout_ms = $service['connect_timeout_ms'];$/;"	v
+connect_timeout_ms	./src/php5.2/RpcTransport.php	/^		$connect_timeout_ms = 1000;$/;"	v
+connection	./src/php5.2/protocol_phpv5.2.php	/^  function connection()$/;"	f
+connectionType	./src/php5.2/PbProtocol.php	/^		$this->connectionType = $connectionType;$/;"	v
+connectionType	./src/php5.2/PbProtocol.php	/^		$this->connectionType = true;$/;"	v
+connectionType	./src/php5.2/PbProtocol.php	/^	private $connectionType;                \/\/连接类型$/;"	v
+constructor	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^     * Creates the class constructor$/;"	c
+consume	./bin/protobuf_php5.2_lib/message/pb_message.php	/^                    $consume = new PBInt($this->reader);$/;"	v
+consume	./bin/protobuf_php5.2_lib/message/pb_message.php	/^                    $consume = new PBString($this->reader);$/;"	v
+content	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $content = trim(substr($string, $offset['begin'] + 1, $offset['end'] - $offset['begin'] - 2));$/;"	v
+content	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $content = trim(substr($content, 0, $matches[0][1])) . ';';$/;"	v
+content	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $content = trim(substr($content, 0, $matches[0][1]));$/;"	v
+content	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $content = trim(substr($content, strlen($name)));$/;"	v
+content	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $content = trim(trim(trim($content), ';'));$/;"	v
+contentType	./src/php5.2/PbProtocol.php	/^		$this->contentType = "html\/text";$/;"	v
+contentType	./src/php5.2/PbProtocol.php	/^		$this->contentType = $contentType;$/;"	v
+contentType	./src/php5.2/PbProtocol.php	/^	private $contentType;                   \/\/消息类型$/;"	v
+content_length	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $content_length = strlen($this->_d_string);$/;"	v
+content_type	./src/php5.2/protocol_phpv5.2.php	/^  function content_type()$/;"	f
+controller	./unittest/php5.2/TestRpcChannel.php	/^            $controller = NULL;$/;"	v
+controller	./unittest/php5.2/TestRpcChannel.php	/^            $controller = new RpcController();$/;"	v
+controller	./unittest/php5.2/TestRpcChannel.php	/^        $controller = new RpcController();$/;"	v
+create_time	./src/php5.2/protocol_phpv5.2.php	/^  function create_time()$/;"	f
+dbname	./include/connectpool/ConnectionMysqli.class.php	/^        $dbname = $arrAuth['dbname'];$/;"	v
+dbpass	./include/connectpool/ConnectionMysqli.class.php	/^        $dbpass = $arrAuth['dbpass'];$/;"	v
+dbuser	./include/connectpool/ConnectionMysqli.class.php	/^        $dbuser = $arrAuth['dbuser'];$/;"	v
+decode	./src/Protocol.php	/^    public function decode($rpcResponse,&$controller);$/;"	f
+decode	./src/php5.2/PbProtocol.php	/^    public function decode($responseData,&$controller) {$/;"	f
+definitions	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^     * Creates the class definitions$/;"	c
+deserialize	./src/php5.2/RpcTransport.php	/^	public function deserialize($nshead_data){$/;"	f
+deserialize_result	./src/php5.2/RpcChannel.php	/^        $deserialize_result = $this->protocol->decode($responseData,$controller);$/;"	v
+done	./src/RpcClosure.php	/^		$this->done = $done;$/;"	v
+done	./src/RpcClosure.php	/^	private $done;              \/\/方法名$/;"	v
+encode	./src/Protocol.php	/^    public function encode($rpcRequest,&$controller);$/;"	f
+encode	./src/php5.2/PbProtocol.php	/^    public function encode($request,&$controller) {$/;"	f
+err	./src/php5.2/RpcTransport.php	/^					$err = $sock->getLastError();$/;"	v
+err	./src/php5.2/RpcTransport.php	/^				$err = $sock->getLastError();$/;"	v
+err	./src/php5.2/RpcTransport.php	/^			$err = $sock->getLastError();$/;"	v
+err	./src/php5.2/RpcTransport.php	/^			$err = ConnectionMan::getLastErrno();$/;"	v
+err	./src/php5.2/RpcTransport.php	/^		$err = null;$/;"	v
+err	./src/php5.2/RpcTransport.php	/^		$this->err = $err;$/;"	v
+errno	./include/connectpool/ConnectionMysqli.class.php	/^            $errno = mysqli_connect_errno();$/;"	v
+error	./src/php5.2/protocol_phpv5.2.php	/^  function error()$/;"	f
+errorHandler	./src/php5.2/PbProtocol.php	/^		$this->errorHandler = new RpcErrorno();$/;"	v
+errorHandler	./src/php5.2/PbProtocol.php	/^	private $errorHandler;					\/\/错误处理$/;"	v
+errorHandler	./src/php5.2/RpcChannel.php	/^		$this->errorHandler = new RpcErrorno();$/;"	v
+errorHandler	./src/php5.2/RpcChannel.php	/^    private $errorHandler;                 \/\/错误处理          class RpcErrorno$/;"	v
+errorHandler	./src/php5.2/RpcTransport.php	/^		$this->errorHandler = new RpcErrorno();$/;"	v
+errorHandler	./src/php5.2/RpcTransport.php	/^	private $errorHandler;			  \/\/错误处理         class RpcErrorno$/;"	v
+errorSet	./src/RpcErrorno.php	/^	private $errorSet = array($/;"	v
+error_code	./src/RpcController.php	/^		$this->error_code = $error_code;$/;"	v
+error_code	./src/RpcController.php	/^		$this->error_code = 0;$/;"	v
+error_code	./src/RpcController.php	/^	private $error_code;                   \/\/错误码$/;"	v
+error_code	./src/RpcController.php	/^        $this->error_code = 0;$/;"	v
+error_text	./src/RpcController.php	/^		$this->error_text = "";$/;"	v
+error_text	./src/RpcController.php	/^		$this->error_text = $error_text;$/;"	v
+error_text	./src/RpcController.php	/^	private $error_text;                   \/\/错误信息$/;"	v
+error_text	./src/RpcController.php	/^        $this->error_text = "";$/;"	v
+fields	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    var $fields = array();$/;"	v
+file	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^     * Creates php class file for the proto file$/;"	c
+filename	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $filename = $filename[count($filename) - 1];$/;"	v
+filename	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $filename = explode("\/", $protofile);$/;"	v
+floatTimeoutSec	./include/connectpool/ConnectionSocket.class.php	/^        $floatTimeoutSec = (float)($intTimeout \/ 1000.0);$/;"	v
+for	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^ * Abstract class for an input reader$/;"	c
+for	./src/Socket.php	/^ * @brief class for data sending\/recving via socket$/;"	c
+from_host	./src/php5.2/protocol_phpv5.2.php	/^  function from_host()$/;"	f
+genid	./src/php5.2/PbProtocol.php	/^	public function genid(){$/;"	f
+getAcceptCharset	./src/php5.2/PbProtocol.php	/^	public function getAcceptCharset(){$/;"	f
+getChannel	./src/RpcController.php	/^	public function getChannel(){$/;"	f
+getChannel	./src/php5.2/RpcChannel.php	/^	public function getChannel(){$/;"	f
+getCharset	./src/php5.2/PbProtocol.php	/^	public function getCharset(){$/;"	f
+getConnectionType	./src/php5.2/PbProtocol.php	/^	public function getConnectionType(){$/;"	f
+getContentType	./src/php5.2/PbProtocol.php	/^	public function getContentType(){$/;"	f
+getError	./src/php5.2/RpcTransport.php	/^	public function getError(){$/;"	f
+getErrorCode	./src/RpcController.php	/^	public function getErrorCode(){$/;"	f
+getErrorText	./src/RpcController.php	/^	public function getErrorText(){$/;"	f
+getErrorText	./src/RpcErrorno.php	/^	public function getErrorText($err_no){$/;"	f
+getKey	./src/php5.2/RpcTransport.php	/^	public function getKey(){$/;"	f
+getLastErrno	./include/connectpool/ConnectionMan.class.php	/^    public static function getLastErrno()$/;"	f
+getLastError	./src/Socket.php	/^    public function getLastError()$/;"	f
+getLocalIp	./src/php5.2/PbProtocol.php	/^	public function getLocalIp(){$/;"	f
+getLocalTime	./src/php5.2/PbProtocol.php	/^	public function getLocalTime(){$/;"	f
+getLogid	./src/RpcController.php	/^	public function getLogid(){$/;"	f
+getMethod	./src/RpcController.php	/^	public function getMethod(){$/;"	f
+getMethodId	./src/RpcController.php	/^	public function getMethodId(){$/;"	f
+getMysqli	./include/connectpool/ConnectionMan.class.php	/^    public static function getMysqli(&$selServer, $arrServers, $arrAuth, $intTimeout=1000, $arrStrategy=null,$/;"	f
+getResource	./include/connectpool/ConnectionMan.class.php	/^    public static function getResource(&$selServer, $strConnectionType, $arrServers, $arrAuth, $intTimeout,$/;"	f
+getServiceName	./src/RpcController.php	/^	public function getServiceName(){$/;"	f
+getSocket	./include/connectpool/ConnectionMan.class.php	/^    public static function getSocket(&$selServer, $arrServers, $intTimeout=100, $arrStrategy=null,$/;"	f
+getSocket	./src/php5.2/RpcTransport.php	/^	private function getSocket($service,$connect_timeout_ms,&$sd,&$selServer,&$controller){$/;"	f
+getVersion	./src/php5.2/PbProtocol.php	/^	public function getVersion(){$/;"	f
+get_message_from	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	public function get_message_from($from)$/;"	f
+get_pointer	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	public function get_pointer()$/;"	f
+get_types	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    public function get_types($number)$/;"	f
+get_value	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    public function get_value($string)$/;"	f
+get_value	./bin/protobuf_php5.2_lib/message/type/pb_scalar.php	/^	public function get_value()$/;"	f
+handle	./include/connectpool/ConnectionMan.class.php	/^            $handle = self::$_connection->connect($server, $intTimeout, $arrAuth);$/;"	v
+handle	./include/connectpool/ConnectionMan.class.php	/^        $handle = false;$/;"	v
+handle	./include/connectpool/ConnectionMan.class.php	/^        $handle = self::getResource($selServer, $strConnectionType, $arrServers, $arrAuth, $intTimeout, $arrStrategy,$/;"	v
+hasChannel	./src/php5.2/RpcChannel.php	/^		$this->hasChannel = false;$/;"	v
+hasChannel	./src/php5.2/RpcChannel.php	/^		$this->hasChannel = true;$/;"	v
+hasChannel	./src/php5.2/RpcChannel.php	/^	private $hasChannel;                   \/\/已设置channel标志 bool$/;"	v
+hasKey	./src/php5.2/RpcTransport.php	/^		$this->hasKey = false;$/;"	v
+hasKey	./src/php5.2/RpcTransport.php	/^		$this->hasKey = true;$/;"	v
+hasKey	./src/php5.2/RpcTransport.php	/^	private $hasKey;                  \/\/设置均衡因子标识 bool$/;"	v
+hasKey	./src/php5.2/RpcTransport.php	/^	public function hasKey(){$/;"	f
+head	./src/php5.2/RpcTransport.php	/^			$head = $this->deserialize($nshead);$/;"	v
+head	./src/php5.2/RpcTransport.php	/^		$head = unpack("Sid\/Sversion\/Ilogid\/a16provider\/Imagic_num\/Ireserved\/Ibody_len",$nshead_data);$/;"	v
+hex_to_str	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    public function hex_to_str($hex)$/;"	f
+hexstring	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^                $hexstring = '0' . $hexstring;$/;"	v
+hexstring	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^            $hexstring = dechex(bindec($string));$/;"	v
+hexstring	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $hexstring = '';$/;"	v
+high	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $high = substr($binstring,0, strlen($binstring) - 3) . '0000';$/;"	v
+host	./include/connectpool/ConnectionMysqli.class.php	/^        $host = $server['host'];$/;"	v
+host	./include/connectpool/ConnectionSocket.class.php	/^        $host = $server['host'];$/;"	v
+i	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $i = 1;$/;"	v
+i	./unittest/php5.2/TestRpcChannel.php	/^        $i = 0;$/;"	v
+i3	./bin/echo.php	/^  function i3()$/;"	f
+i3	./unittest/php5.2/echo.php	/^  function i3()$/;"	f
+i4	./bin/echo.php	/^  function i4()$/;"	f
+i4	./unittest/php5.2/echo.php	/^  function i4()$/;"	f
+id	./src/php5.2/PbProtocol.php	/^	private $id;                            \/\/请求的唯一标识$/;"	v
+id	./src/php5.2/RpcTransport.php	/^		$this->id = $id;$/;"	v
+id	./src/php5.2/RpcTransport.php	/^		$this->id = 0;$/;"	v
+id	./src/php5.2/RpcTransport.php	/^	private $id;                      \/\/nshead id$/;"	v
+id	./src/php5.2/protocol_phpv5.2.php	/^  function id()$/;"	f
+index	./bin/protobuf_php5.2_lib/message/pb_message.php	/^                $index = count($this->values[$messtypes['field']]) - 1;$/;"	v
+index	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        foreach ($this->fields as $index => $field)$/;"	v
+index	./include/connectpool/StrategySimple.class.php	/^                    $index = 0;$/;"	v
+index	./include/connectpool/StrategySimple.class.php	/^                $index = intval($intBalanceCode);$/;"	v
+index	./include/connectpool/StrategySimple.class.php	/^                $index = rand(0, $serverCount-1);$/;"	v
+index	./include/connectpool/StrategySimple.class.php	/^            $index = ($index + 1) % $serverCount;$/;"	v
+index	./include/connectpool/StrategySimple.class.php	/^        $index = $this->_currentIndex;$/;"	v
+index	./include/connectpool/StrategyState.class.php	/^                    $index = 0;$/;"	v
+index	./include/connectpool/StrategyState.class.php	/^                $index = intval($intBalanceCode);$/;"	v
+index	./include/connectpool/StrategyState.class.php	/^                $index = rand(0, $serverCount-1);$/;"	v
+index	./include/connectpool/StrategyState.class.php	/^            $index = ($index + 1) % $serverCount;$/;"	v
+index	./include/connectpool/StrategyState.class.php	/^        $index = $this->_currentIndex;$/;"	v
+intBalanceCode	./include/connectpool/ConnectionMan.class.php	/^        $intBalanceCode=false)$/;"	v
+intBalanceCode	./include/connectpool/StrategySimple.class.php	/^    public function selectServer($arrServers, $intBalanceCode=false)$/;"	v
+intBalanceCode	./include/connectpool/StrategyState.class.php	/^    public function selectServer($arrServers, $intBalanceCode=false)$/;"	v
+intConnectTimeoutMS	./src/Socket.php	/^        $intConnectTimeoutMS = 1000,$/;"	v
+intConnectTimeoutMS	./src/Socket.php	/^    public function setTimeout($intReadTimeoutMS, $intWriteTimeoutMS, $intConnectTimeoutMS = null) {$/;"	v
+intErrorNo	./src/Socket.php	/^        $intErrorNo         = socket_last_error($this->_sock);$/;"	v
+intLeft	./src/Socket.php	/^        $intLeft    = $intDataLength;$/;"	v
+intLeft	./src/Socket.php	/^        $intLeft    = $intMaxDataLength;$/;"	v
+intMicroSecond	./src/Socket.php	/^        $intMicroSecond = intval($this->_intReadTimeoutUS % 1000000);$/;"	v
+intMicroSecond	./src/Socket.php	/^        $intMicroSecond = intval($this->_intWriteTimeoutUS % 1000000);$/;"	v
+intReadTimeoutMS	./src/Socket.php	/^        $intReadTimeoutMS = 1000,$/;"	v
+intReceived	./src/Socket.php	/^            $intReceived = strlen($strReceived);$/;"	v
+intRemotePort	./src/Socket.php	/^    public function connect($strRemoteHost = null, $intRemotePort = null) {$/;"	v
+intSecond	./src/Socket.php	/^        $intSecond      = intval($this->_intReadTimeoutUS \/ 1000000);$/;"	v
+intSecond	./src/Socket.php	/^        $intSecond      = intval($this->_intWriteTimeoutUS \/ 1000000);$/;"	v
+intSent	./src/Socket.php	/^        $intSent        = fwrite($this->_sock, $strData, $intDataLength);$/;"	v
+intServerCount	./include/connectpool/ConnectionMan.class.php	/^        $intServerCount = count($arrServers);$/;"	v
+intTimeout	./include/connectpool/ConnectionMan.class.php	/^    public static function getMysqli(&$selServer, $arrServers, $arrAuth, $intTimeout=1000, $arrStrategy=null,$/;"	v
+intTimeout	./include/connectpool/ConnectionMan.class.php	/^    public static function getSocket(&$selServer, $arrServers, $intTimeout=100, $arrStrategy=null,$/;"	v
+intTimeoutMs	./src/Socket.php	/^    public function receive($intDataLength, $intTimeoutMs = null) {$/;"	v
+intTimeoutMs	./src/Socket.php	/^    public function receiveAll($intMaxDataLength, $intTimeoutMs = null) {$/;"	v
+intTimeoutMs	./src/Socket.php	/^    public function send($strData, $intDataLength, $intTimeoutMs = null) {$/;"	v
+intTimeoutSec	./include/connectpool/ConnectionMysqli.class.php	/^        $intTimeoutSec = $intTimeout > 1000 ? $intTimeout\/1000 : 1;$/;"	v
+intUSGone	./src/Socket.php	/^            $intUSGone = ($tmCurrent['sec'] - $tmStart['sec']) * 1000000$/;"	v
+intWriteTimeoutMS	./src/Socket.php	/^        $intWriteTimeoutMS = 1000,$/;"	v
+ipstr_chunk1	./src/php5.2/PbProtocol.php	/^		$ipstr_chunk1 = explode(":",$ipstr[1]);$/;"	v
+ipstr_chunk2	./src/php5.2/PbProtocol.php	/^		$ipstr_chunk2 = explode(" ",$ipstr_chunk1[1]);$/;"	v
+isAClassMethod	./src/RpcClosure.php	/^		$this->isAClassMethod = true;$/;"	v
+isAClassMethod	./src/RpcClosure.php	/^	private $isAClassMethod;    \/\/是否是类方法$/;"	v
+isAMethod	./src/RpcClosure.php	/^			$this->isAMethod = true;$/;"	v
+isAMethod	./src/RpcClosure.php	/^	private $isAMethod;         \/\/是否是类外方法$/;"	v
+isFailed	./src/RpcController.php	/^		$this->isFailed = $fail;$/;"	v
+isFailed	./src/RpcController.php	/^		$this->isFailed = false;$/;"	v
+isFailed	./src/RpcController.php	/^	private $isFailed;                     \/\/失败状态标识$/;"	v
+isFailed	./src/RpcController.php	/^        $this->isFailed = false;$/;"	v
+isHasChannel	./src/php5.2/RpcChannel.php	/^	public function isHasChannel(){$/;"	f
+is_string	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			if ($value >= 10000000 && $is_string == false)$/;"	v
+key	./src/php5.2/RpcTransport.php	/^		$this->key = $key;$/;"	v
+key	./src/php5.2/RpcTransport.php	/^		$this->key = -1;$/;"	v
+key	./src/php5.2/RpcTransport.php	/^	private $key;                     \/\/负载均衡因子     int$/;"	v
+length	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $length = $this->reader->next();$/;"	v
+length	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^		$this->length = strlen($string);$/;"	v
+length	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^ var $length = 0;$/;"	v
+length	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$length = $this->reader->next();$/;"	v
+length	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^		$length = $this->reader->next();$/;"	v
+log_id	./src/RpcController.php	/^		$this->log_id = 0;$/;"	v
+log_id	./src/RpcController.php	/^		return $this->log_id = $log_id;$/;"	v
+log_id	./src/RpcController.php	/^	private $log_id;                       \/\/日志id$/;"	v
+log_id	./src/RpcController.php	/^        $this->log_id = 0;$/;"	v
+log_id	./src/php5.2/protocol_phpv5.2.php	/^  function log_id()$/;"	f
+logid	./src/php5.2/RpcTransport.php	/^		$this->logid = $logid;$/;"	v
+logid	./src/php5.2/RpcTransport.php	/^		$this->logid = 0;$/;"	v
+logid	./src/php5.2/RpcTransport.php	/^	private $logid;                   \/\/nshead logid$/;"	v
+low	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $low = substr($binstring, strlen($binstring) - 3, strlen($binstring));$/;"	v
+m_types	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    var $m_types = array();$/;"	v
+machineList	./src/php5.2/RpcTransport.php	/^		$machineList = $service['server'];$/;"	v
+markFail	./include/connectpool/Strategy.class.php	/^    public function markFail($server)$/;"	f
+markFail	./include/connectpool/StrategyState.class.php	/^    public function markFail($arrServer)$/;"	f
+markSucc	./include/connectpool/Strategy.class.php	/^    public function markSucc($server)$/;"	f
+markSucc	./include/connectpool/StrategyState.class.php	/^    public function markSucc($arrServer)$/;"	f
+match	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $match = preg_match('\/(.*);\\s?\/', $string, $matches, PREG_OFFSET_CAPTURE);$/;"	v
+match	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $match = preg_match('\/([^\\s^\\{}]*)\/', $string, $matches, PREG_OFFSET_CAPTURE);$/;"	v
+match	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $match = preg_match('\/=\\s(.*);\/', $content, $matches, PREG_OFFSET_CAPTURE);$/;"	v
+match	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $match = preg_match('\/\\[\\s?default\\s?=\\s?([^\\[]*)\\]\\s?;\/', $content, $matches, PREG_OFFSET_CAPTURE);$/;"	v
+match	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $match = preg_match_all('\/(.*);\\s?\/', $content, $matches);$/;"	v
+matches	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $matches = $this->_next($content, true);$/;"	v
+messtypes	./bin/protobuf_php5.2_lib/message/pb_message.php	/^            $messtypes = $this->get_types($next);$/;"	v
+method	./src/RpcController.php	/^		$this->method = "";$/;"	v
+method	./src/RpcController.php	/^		$this->method = $method;$/;"	v
+method	./src/RpcController.php	/^	private $method;                       \/\/请求方法名$/;"	v
+method_id	./src/RpcController.php	/^		$this->method_id = $method_id;$/;"	v
+method_id	./src/RpcController.php	/^		$this->method_id = 0;$/;"	v
+method_id	./src/RpcController.php	/^	private $method_id;                    \/\/请求方法id$/;"	v
+method_id	./src/RpcController.php	/^        $this->method_id = 0;$/;"	v
+method_id	./src/php5.2/protocol_phpv5.2.php	/^  function method_id()$/;"	f
+modus	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $this->modus = $modus;$/;"	v
+modus	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    var $modus = 1;$/;"	v
+myarray	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $myarray = array();$/;"	v
+mysqli	./include/connectpool/ConnectionMysqli.class.php	/^        $mysqli = mysqli_init();$/;"	v
+name	./bin/echo.php	/^  function name()$/;"	f
+name	./bin/protobuf_php5.2_lib/message/pb_message.php	/^            foreach ($this->fields as $name => $value)$/;"	v
+name	./bin/protobuf_php5.2_lib/message/pb_message.php	/^            foreach ($this->values as $name => $value)$/;"	v
+name	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $name = $this->_next($string);$/;"	v
+name	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $name = $matches[0][0];$/;"	v
+name	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $name = explode('.', $filename);$/;"	v
+name	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $name = join($name, '.');$/;"	v
+name	./unittest/php5.2/echo.php	/^  function name()$/;"	f
+name2	./bin/protobuf_php5.2_lib/message/pb_message.php	/^                    foreach ($value as $name2 => $value2)$/;"	v
+namespace	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $namespace = trim(trim(join($apath, '.'), '.') . '.' . $type, '.');$/;"	v
+namespace	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $namespace  = trim($path . '.' . $namespace, '.');$/;"	v
+namespace	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $namespace = $type;$/;"	v
+namespace	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $namespace = '';$/;"	v
+newstring	./bin/protobuf_php5.2_lib/message/pb_message.php	/^                    $newstring = '';$/;"	v
+newstring	./bin/protobuf_php5.2_lib/message/pb_message.php	/^                $newstring = '';$/;"	v
+next	./bin/protobuf_php5.2_lib/message/pb_message.php	/^            $next = $this->reader->next();$/;"	v
+next	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^    public abstract function next();$/;"	f
+next	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^    public function next($is_string = false)$/;"	f
+next	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $next = ($this->_next($string));$/;"	v
+not	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    \/\/ chunk which the class not understands$/;"	c
+nshead	./src/php5.2/RpcTransport.php	/^		$nshead = $sock->receive(36);$/;"	v
+nshead	./src/php5.2/RpcTransport.php	/^		$nshead = pack("SSIa16III",$/;"	v
+objConn	./include/connectpool/ConnectionMan.class.php	/^            $objConn = new $strConnectionClass();$/;"	v
+objStrategy	./include/connectpool/ConnectionMan.class.php	/^            $objStrategy = new $strStrategyClass($arrConfig);$/;"	v
+offset	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $offset = $this->_get_begin_end($string, "{", "}");$/;"	v
+offset_begin	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $offset_begin = strpos($string, $char);$/;"	v
+offset_close	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $offset_close = strpos($string, $charend, $_offset);$/;"	v
+offset_open	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $offset_open = strpos($string, $char, $_offset);$/;"	v
+p17	./bin/echo.php	/^  function p17()$/;"	f
+p17	./unittest/php5.2/echo.php	/^  function p17()$/;"	f
+package	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^        $package = '';$/;"	v
+parse	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    public function parse($protofile)$/;"	f
+path	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _parse_message_type(&$string, $m_name, $path = '')$/;"	v
+person	./bin/echo.php	/^class person extends PBMessage$/;"	c
+person	./unittest/php5.2/TestRpcChannel.php	/^            $person = new person();$/;"	v
+person	./unittest/php5.2/TestRpcChannel.php	/^        $person = new person();$/;"	v
+person	./unittest/php5.2/echo.php	/^class person extends PBMessage$/;"	c
+phpver	./bin/protoc.php	/^$phpver = explode(".",phpversion());$/;"	v
+pointer	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	protected $pointer = 0;$/;"	v
+pointer	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$pointer = $this->reader->get_pointer();$/;"	v
+pointer	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^		$pointer = $this->reader->get_pointer();$/;"	v
+port	./include/connectpool/ConnectionMysqli.class.php	/^        $port = $server['port'];$/;"	v
+port	./include/connectpool/ConnectionSocket.class.php	/^        $port = $server['port'];$/;"	v
+pre	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^                $pre = '0';$/;"	v
+pre	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^            $pre = '1';$/;"	v
+pre	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $pre = '1';$/;"	v
+proto	./bin/protoc.php	/^    $proto = new PBParser();$/;"	v
+protocol	./src/php5.2/RpcChannel.php	/^        $this->protocol = new PbProtocol($this->transport);$/;"	v
+protocol	./src/php5.2/RpcChannel.php	/^    private $protocol;                     \/\/协议层            class PbProtocol$/;"	v
+provider	./src/php5.2/RpcTransport.php	/^		$this->provider = "sat-pbrpc";$/;"	v
+provider	./src/php5.2/RpcTransport.php	/^		$this->provider = $provider;$/;"	v
+provider	./src/php5.2/RpcTransport.php	/^	private $provider;                \/\/nshead provider$/;"	v
+read_timeout_ms	./src/php5.2/RpcTransport.php	/^			$read_timeout_ms = $service['read_timeout_ms'];$/;"	v
+read_timeout_ms	./src/php5.2/RpcTransport.php	/^		$read_timeout_ms = 1000;$/;"	v
+reader	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $this->reader = $reader;$/;"	v
+reader	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $this->reader = new PBInputStringReader($message);$/;"	v
+reader	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    protected $reader;$/;"	v
+receive	./src/Socket.php	/^    public function receive($intDataLength, $intTimeoutMs = null) {$/;"	f
+receiveAll	./src/Socket.php	/^    public function receiveAll($intMaxDataLength, $intTimeoutMs = null) {$/;"	f
+reg	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    private function _next($string, $reg = false)$/;"	v
+remove_last_	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function remove_last_' .  $field['value']['name'] . '()' . "\\n  {\\n";$/;"	f
+remove_last_requestBody	./src/php5.2/protocol_phpv5.2.php	/^  function remove_last_requestBody()$/;"	f
+remove_last_responseBody	./src/php5.2/protocol_phpv5.2.php	/^  function remove_last_responseBody()$/;"	f
+remove_last_rs16	./bin/echo.php	/^  function remove_last_rs16()$/;"	f
+remove_last_rs16	./unittest/php5.2/echo.php	/^  function remove_last_rs16()$/;"	f
+request	./unittest/php5.2/TestRpcChannel.php	/^            $request = NULL;$/;"	v
+request	./unittest/php5.2/TestRpcChannel.php	/^            $request = new EchoRequest();$/;"	v
+request	./unittest/php5.2/TestRpcChannel.php	/^        $request = new EchoRequest();$/;"	v
+requestBody	./src/php5.2/PbProtocol.php	/^		$requestBody = new RequestBody();$/;"	v
+requestBody	./src/php5.2/protocol_phpv5.2.php	/^  function requestBody($offset)$/;"	f
+requestBody_size	./src/php5.2/protocol_phpv5.2.php	/^  function requestBody_size()$/;"	f
+requestBuffer	./src/php5.2/RpcChannel.php	/^        $requestBuffer = $this->protocol->encode($request,$controller);$/;"	v
+requestData	./src/php5.2/PbProtocol.php	/^        $requestData = $rpcRequest->SerializeToString();$/;"	v
+requestHead	./src/php5.2/PbProtocol.php	/^		$requestHead = new RequestHead();$/;"	v
+requestHead	./src/php5.2/protocol_phpv5.2.php	/^  function requestHead()$/;"	f
+reset	./src/RpcController.php	/^	public function reset(){$/;"	f
+resourceSock	./src/Socket.php	/^        $resourceSock = null$/;"	v
+response	./bin/echo.php	/^  function response()$/;"	f
+response	./src/php5.2/RpcChannel.php	/^		if($request === null || $response === null) {$/;"	v
+response	./src/php5.2/RpcTransport.php	/^            $response = $sock->receive($head['body_len']);$/;"	v
+response	./unittest/php5.2/TestRpcChannel.php	/^            $response = NULL;$/;"	v
+response	./unittest/php5.2/TestRpcChannel.php	/^            $response = new EchoResponse();$/;"	v
+response	./unittest/php5.2/TestRpcChannel.php	/^        $response = new EchoResponse();$/;"	v
+response	./unittest/php5.2/TestRpcChannel.php	/^        $response = null;$/;"	v
+response	./unittest/php5.2/echo.php	/^  function response()$/;"	f
+responseBody	./src/php5.2/PbProtocol.php	/^        $responseBody = $rpcResponse->responseBody(0);$/;"	v
+responseBody	./src/php5.2/protocol_phpv5.2.php	/^  function responseBody($offset)$/;"	f
+responseBody_size	./src/php5.2/protocol_phpv5.2.php	/^  function responseBody_size()$/;"	f
+responseData	./src/php5.2/RpcChannel.php	/^        $responseData = null;$/;"	v
+responseHead	./src/php5.2/PbProtocol.php	/^        $responseHead = $rpcResponse->responseHead();$/;"	v
+responseHead	./src/php5.2/protocol_phpv5.2.php	/^  function responseHead()$/;"	f
+result	./bin/echo.php	/^  function result()$/;"	f
+result	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $result = curl_exec($ch);$/;"	v
+result	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^        $result = $shift = 0;$/;"	v
+result	./src/php5.2/PbProtocol.php	/^        $result = $request->SerializeToString();$/;"	v
+result	./unittest/php5.2/echo.php	/^  function result()$/;"	f
+ret	./src/php5.2/RpcChannel.php	/^        $ret = $this->transport->talk($requestBuffer,$responseData,$controller);$/;"	v
+retry	./src/php5.2/RpcTransport.php	/^				$retry = $service['retry'];$/;"	v
+retry	./src/php5.2/RpcTransport.php	/^			$retry = 1;$/;"	v
+rpcRequest	./src/php5.2/PbProtocol.php	/^        $rpcRequest = new RpcRequest();$/;"	v
+rpcResponse	./src/php5.2/PbProtocol.php	/^        $rpcResponse = new RpcResponse();$/;"	v
+rs16	./bin/echo.php	/^  function rs16($offset)$/;"	f
+rs16	./unittest/php5.2/echo.php	/^  function rs16($offset)$/;"	f
+rs16_size	./bin/echo.php	/^  function rs16_size()$/;"	f
+rs16_size	./unittest/php5.2/echo.php	/^  function rs16_size()$/;"	f
+s1	./bin/echo.php	/^  function s1()$/;"	f
+s1	./unittest/php5.2/echo.php	/^  function s1()$/;"	f
+s14	./bin/echo.php	/^  function s14()$/;"	f
+s14	./unittest/php5.2/echo.php	/^  function s14()$/;"	f
+save	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$save = $this->value;$/;"	v
+saved	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$saved = $this->value;$/;"	v
+scalar_types	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^    var $scalar_types = array('double', 'float', 'int32' => 'PBInt', 'int64' => 'PBInt',$/;"	v
+sd	./src/php5.2/RpcTransport.php	/^		$sd = ConnectionMan::getSocket($selServer,$machineList,$connect_timeout_ms,$arrStrategy,$balanceCode);$/;"	v
+selServer	./include/connectpool/ConnectionMan.class.php	/^                $selServer = $server;$/;"	v
+selServer	./include/connectpool/ConnectionMan.class.php	/^        $selServer = false;$/;"	v
+selServer	./src/php5.2/RpcTransport.php	/^		$selServer = array();$/;"	v
+selectServer	./include/connectpool/Strategy.class.php	/^    abstract function selectServer($arrServers, $balanceCode=false);$/;"	f
+selectServer	./include/connectpool/StrategySimple.class.php	/^    public function selectServer($arrServers, $intBalanceCode=false)$/;"	f
+selectServer	./include/connectpool/StrategyState.class.php	/^    public function selectServer($arrServers, $intBalanceCode=false)$/;"	f
+send	./src/Socket.php	/^    public function send($strData, $intDataLength, $intTimeoutMs = null) {$/;"	f
+send	./src/php5.2/RpcTransport.php	/^		$send = $nshead.$request;$/;"	v
+senddata	./src/php5.2/RpcTransport.php	/^		$senddata = $this->serialize($request);$/;"	v
+serialize	./src/php5.2/RpcTransport.php	/^	public function serialize($request){$/;"	f
+serialized_request	./src/php5.2/protocol_phpv5.2.php	/^  function serialized_request()$/;"	f
+serialized_response	./src/php5.2/protocol_phpv5.2.php	/^  function serialized_response()$/;"	f
+server	./include/connectpool/ConnectionMan.class.php	/^            $server = self::$_strategy->selectServer($arrServers, $intBalanceCode);$/;"	v
+server	./include/connectpool/StrategySimple.class.php	/^        $server = $arrServers[$index];$/;"	v
+server	./include/connectpool/StrategyState.class.php	/^                $server = false;$/;"	v
+server	./include/connectpool/StrategyState.class.php	/^        $server = $arrServers[$index];$/;"	v
+serverCount	./include/connectpool/StrategySimple.class.php	/^        $serverCount = count($arrServers);$/;"	v
+serverCount	./include/connectpool/StrategyState.class.php	/^        $serverCount = count($arrServers);$/;"	v
+service	./src/php5.2/RpcTransport.php	/^		$service = $this->configManager[$controller->getChannel()];$/;"	v
+service	./src/php5.2/protocol_phpv5.2.php	/^  function service()$/;"	f
+service_name	./src/RpcController.php	/^		$this->service_name = "";$/;"	v
+service_name	./src/RpcController.php	/^		$this->service_name = $service_name;$/;"	v
+service_name	./src/RpcController.php	/^	private $service_name;                 \/\/服务名称$/;"	v
+service_name	./src/RpcController.php	/^        $this->service_name = "";$/;"	v
+setAcceptCharset	./src/php5.2/PbProtocol.php	/^	public function setAcceptCharset($accept_charset){$/;"	f
+setChannel	./src/RpcController.php	/^	public function setChannel($channel_name){$/;"	f
+setChannel	./src/php5.2/RpcChannel.php	/^	public function setChannel($channel_name){$/;"	f
+setCharset	./src/php5.2/PbProtocol.php	/^	public function setCharset($charset){$/;"	f
+setConnectionType	./src/php5.2/PbProtocol.php	/^	public function setConnectionType($connectionType){$/;"	f
+setContentType	./src/php5.2/PbProtocol.php	/^	public function setContentType($contentType){$/;"	f
+setError	./src/php5.2/RpcTransport.php	/^	public function setError($err){$/;"	f
+setErrorCode	./src/RpcController.php	/^	public function setErrorCode($error_code){$/;"	f
+setErrorText	./src/RpcController.php	/^	public function setErrorText($error_text){$/;"	f
+setFailed	./src/RpcController.php	/^	public function setFailed($fail){$/;"	f
+setId	./src/php5.2/RpcTransport.php	/^	public function setId($id){$/;"	f
+setKey	./src/php5.2/RpcTransport.php	/^	public function setKey($key){$/;"	f
+setLogid	./src/RpcController.php	/^	public function setLogid($log_id){$/;"	f
+setLogid	./src/php5.2/RpcTransport.php	/^	public function setLogid($logid){$/;"	f
+setMethod	./src/RpcController.php	/^	public function setMethod($method){$/;"	f
+setMethodId	./src/RpcController.php	/^	public function setMethodId($method_id){$/;"	f
+setProvider	./src/php5.2/RpcTransport.php	/^	public function setProvider($provider){$/;"	f
+setRemote	./src/Socket.php	/^    public function setRemote($strRemoteHost, $intRemotePort) {$/;"	f
+setResource	./src/Socket.php	/^    public function setResource ($resource) {$/;"	f
+setServiceName	./src/RpcController.php	/^	public function setServiceName($service_name){$/;"	f
+setTimeout	./src/Socket.php	/^    public function setTimeout($intReadTimeoutMS, $intWriteTimeoutMS, $intConnectTimeoutMS = null) {$/;"	f
+setUnavailable	./include/connectpool/ConnectionMan.class.php	/^    public static function setUnavailable($server)$/;"	f
+setUp	./unittest/php5.2/TestRpcChannel.php	/^    public function setUp(){$/;"	f
+setVersion	./src/php5.2/PbProtocol.php	/^	public function setVersion($version){$/;"	f
+setVersion	./src/php5.2/RpcTransport.php	/^	public function setVersion($version){$/;"	f
+set_	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function set_' .  $field['value']['name'] . '($index, $value)' . "\\n  {\\n";$/;"	f
+set_	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '  function set_' .  $field['value']['name'] . '($value)' . "\\n  {\\n";$/;"	f
+set_accept_charset	./src/php5.2/protocol_phpv5.2.php	/^  function set_accept_charset($value)$/;"	f
+set_b13	./bin/echo.php	/^  function set_b13($value)$/;"	f
+set_b13	./unittest/php5.2/echo.php	/^  function set_b13($value)$/;"	f
+set_b15	./bin/echo.php	/^  function set_b15($value)$/;"	f
+set_b15	./unittest/php5.2/echo.php	/^  function set_b15($value)$/;"	f
+set_charset	./src/php5.2/protocol_phpv5.2.php	/^  function set_charset($value)$/;"	f
+set_code	./src/php5.2/protocol_phpv5.2.php	/^  function set_code($value)$/;"	f
+set_compress_type	./src/php5.2/protocol_phpv5.2.php	/^  function set_compress_type($value)$/;"	f
+set_connection	./src/php5.2/protocol_phpv5.2.php	/^  function set_connection($value)$/;"	f
+set_content_type	./src/php5.2/protocol_phpv5.2.php	/^  function set_content_type($value)$/;"	f
+set_create_time	./src/php5.2/protocol_phpv5.2.php	/^  function set_create_time($value)$/;"	f
+set_error	./src/php5.2/protocol_phpv5.2.php	/^  function set_error($value)$/;"	f
+set_from_host	./src/php5.2/protocol_phpv5.2.php	/^  function set_from_host($value)$/;"	f
+set_i3	./bin/echo.php	/^  function set_i3($value)$/;"	f
+set_i3	./unittest/php5.2/echo.php	/^  function set_i3($value)$/;"	f
+set_i4	./bin/echo.php	/^  function set_i4($value)$/;"	f
+set_i4	./unittest/php5.2/echo.php	/^  function set_i4($value)$/;"	f
+set_id	./src/php5.2/protocol_phpv5.2.php	/^  function set_id($value)$/;"	f
+set_log_id	./src/php5.2/protocol_phpv5.2.php	/^  function set_log_id($value)$/;"	f
+set_method_id	./src/php5.2/protocol_phpv5.2.php	/^  function set_method_id($value)$/;"	f
+set_name	./bin/echo.php	/^  function set_name($value)$/;"	f
+set_name	./unittest/php5.2/echo.php	/^  function set_name($value)$/;"	f
+set_p17	./bin/echo.php	/^  function set_p17($value)$/;"	f
+set_p17	./unittest/php5.2/echo.php	/^  function set_p17($value)$/;"	f
+set_requestBody	./src/php5.2/protocol_phpv5.2.php	/^  function set_requestBody($index, $value)$/;"	f
+set_requestHead	./src/php5.2/protocol_phpv5.2.php	/^  function set_requestHead($value)$/;"	f
+set_response	./bin/echo.php	/^  function set_response($value)$/;"	f
+set_response	./unittest/php5.2/echo.php	/^  function set_response($value)$/;"	f
+set_responseBody	./src/php5.2/protocol_phpv5.2.php	/^  function set_responseBody($index, $value)$/;"	f
+set_responseHead	./src/php5.2/protocol_phpv5.2.php	/^  function set_responseHead($value)$/;"	f
+set_result	./bin/echo.php	/^  function set_result($value)$/;"	f
+set_result	./unittest/php5.2/echo.php	/^  function set_result($value)$/;"	f
+set_rs16	./bin/echo.php	/^  function set_rs16($index, $value)$/;"	f
+set_rs16	./unittest/php5.2/echo.php	/^  function set_rs16($index, $value)$/;"	f
+set_s1	./bin/echo.php	/^  function set_s1($value)$/;"	f
+set_s1	./unittest/php5.2/echo.php	/^  function set_s1($value)$/;"	f
+set_s14	./bin/echo.php	/^  function set_s14($value)$/;"	f
+set_s14	./unittest/php5.2/echo.php	/^  function set_s14($value)$/;"	f
+set_serialized_request	./src/php5.2/protocol_phpv5.2.php	/^  function set_serialized_request($value)$/;"	f
+set_serialized_response	./src/php5.2/protocol_phpv5.2.php	/^  function set_serialized_response($value)$/;"	f
+set_service	./src/php5.2/protocol_phpv5.2.php	/^  function set_service($value)$/;"	f
+set_text	./src/php5.2/protocol_phpv5.2.php	/^  function set_text($value)$/;"	f
+set_value	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^    public function set_value($number)$/;"	f
+set_value	./bin/protobuf_php5.2_lib/message/type/pb_scalar.php	/^	public function set_value($value)$/;"	f
+set_version	./src/php5.2/protocol_phpv5.2.php	/^  function set_version($value)$/;"	f
+sock	./src/php5.2/RpcTransport.php	/^		$sock = new CPHPRPCSocketWrapper($read_timeout_ms,$write_timeout_ms,$connect_timeout_ms,$socketfd);$/;"	v
+socket	./include/connectpool/ConnectionSocket.class.php	/^        $socket = @fsockopen ($host,$port,$intErrno,$strError,$floatTimeoutSec);$/;"	v
+socketfd	./src/php5.2/RpcTransport.php	/^		$socketfd = null;$/;"	v
+split	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^            $split = explode("=", $match);$/;"	v
+status	./src/Socket.php	/^                $status = stream_get_meta_data($this->_sock);$/;"	v
+status	./src/Socket.php	/^        $status = stream_get_meta_data($this->_sock);$/;"	v
+str	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $str = '';$/;"	v
+strConnectionClass	./include/connectpool/ConnectionMan.class.php	/^        $strConnectionClass = (ConnectionManInc::CONNECTION_CLASS_PREFIX).$strConnectionType;$/;"	v
+strConnectionType	./include/connectpool/ConnectionMan.class.php	/^        $strConnectionType = ConnectionManInc::CONNECTION_TYPE_MYSQLI;$/;"	v
+strConnectionType	./include/connectpool/ConnectionMan.class.php	/^        $strConnectionType = ConnectionManInc::CONNECTION_TYPE_SOCKET;$/;"	v
+strData	./src/Socket.php	/^        $strData    = '';$/;"	v
+strErrorMessage	./src/Socket.php	/^        $strErrorMessage    = socket_strerror($intErrorNo);$/;"	v
+strKey	./include/connectpool/StrategyState.class.php	/^            $strKey = $arrServer['host'].':'.$arrServer['port'];$/;"	v
+strKey	./include/connectpool/StrategyState.class.php	/^        $strKey = $arrServer['host'].':'.$arrServer['port'];$/;"	v
+strReceived	./src/Socket.php	/^            $strReceived = fread($this->_sock, $intLeft);$/;"	v
+strStrategyClass	./include/connectpool/ConnectionMan.class.php	/^        $strStrategyClass = (ConnectionManInc::STRATEGY_CLASS_PREFIX).$strStrategyName;$/;"	v
+strStrategyName	./include/connectpool/ConnectionMan.class.php	/^            $strStrategyName = ConnectionManInc::DEFAULT_STRATEGY;$/;"	v
+string	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^                $string = substr('00000000', 0, 7 - strlen($string) % 7) . $string;$/;"	v
+string	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^            $string = substr($string, 0, strlen($string) - 7);$/;"	v
+string	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $string = decbin($number);$/;"	v
+string	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $string = '';$/;"	v
+string	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^	protected $string = '';$/;"	v
+string	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			$string = $this->string[$this->pointer];	        $/;"	v
+string	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			$string = '';$/;"	v
+string	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^		$this->string = $string;$/;"	v
+string	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$string = '';$/;"	v
+string	./bin/protobuf_php5.2_lib/message/type/pb_enum.php	/^		$string = '';$/;"	v
+string	./bin/protobuf_php5.2_lib/message/type/pb_int.php	/^		$string = '';$/;"	v
+string	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$string = parent::SerializeToString($rec);$/;"	v
+string	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^		$string = '';$/;"	v
+string	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string = '' . trim(substr($string, $offset['end']));$/;"	v
+string	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string = trim(substr($string, $matches[0][1] + strlen($matches[0][0])));$/;"	v
+string	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string = trim(substr($string, strlen($next)));$/;"	v
+string	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = '';$/;"	v
+string	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = file_get_contents($protofile);$/;"	v
+string	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = preg_replace('\/\\\/\\\/.+\/', '', $string);$/;"	v
+string	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = preg_replace('\/\\\\r?\\\\n\\s*\/', "\\n", $string);$/;"	v
+string	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $string = trim($string);$/;"	v
+string_array	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $string_array = array();$/;"	v
+string_length	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $string_length = strlen($string);$/;"	v
+stringinner	./bin/protobuf_php5.2_lib/message/pb_message.php	/^            $stringinner = $this->base128->set_value(strlen($stringinner) \/ PBMessage::MODUS) . $stringinner;$/;"	v
+stringinner	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $stringinner = '';$/;"	v
+talk	./src/Transport.php	/^    public function talk($request,&$response,&$controller);$/;"	f
+talk	./src/php5.2/RpcTransport.php	/^	public function talk($request,&$response,&$controller){$/;"	f
+tearDown	./unittest/php5.2/TestRpcChannel.php	/^    public function tearDown(){$/;"	f
+testCallMethod	./unittest/php5.2/TestRpcChannel.php	/^    public function testCallMethod(){$/;"	f
+testCallMethodParamIsNull	./unittest/php5.2/TestRpcChannel.php	/^    public function testCallMethodParamIsNull() {$/;"	f
+testCallMethodWithRequestIsError	./unittest/php5.2/TestRpcChannel.php	/^    public function testCallMethodWithRequestIsError(){$/;"	f
+testPerfCallMethod	./unittest/php5.2/TestRpcChannel.php	/^    public function testPerfCallMethod(){$/;"	f
+text	./src/php5.2/protocol_phpv5.2.php	/^  function text()$/;"	f
+tmCurrent	./src/Socket.php	/^            $tmCurrent = gettimeofday();$/;"	v
+tmStart	./src/Socket.php	/^        $tmStart    = gettimeofday();$/;"	v
+transport	./src/php5.2/RpcChannel.php	/^        $this->transport = new RpcTransport($this->configManager);$/;"	v
+transport	./src/php5.2/RpcChannel.php	/^    private $transport;                    \/\/传输层            class RpcTransport$/;"	v
+type	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^			    										|| $type == 'PBEnum') )$/;"	v
+type	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        	$type = $this->_get_type($field);$/;"	v
+type	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $type = $this->_check_type($name, $array, $path);$/;"	v
+types	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $types = array();$/;"	v
+typeset	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $typeset = true;$/;"	v
+typeset	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $typeset = false;$/;"	v
+unsetKey	./src/php5.2/RpcTransport.php	/^	public function unsetKey(){$/;"	f
+v	./bin/echo.php	/^    $v = $this->_add_arr_value("16");$/;"	v
+v	./bin/echo.php	/^    $v = $this->_get_arr_value("16", $offset);$/;"	v
+v	./bin/echo.php	/^    $v = new $this->fields["16"]();$/;"	v
+v	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '    $v = $this->_add_arr_value("' . $field['value']['value'] . '");'  . "\\n";$/;"	v
+v	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '    $v = $this->_get_arr_value("' . $field['value']['value'] . '", $offset);'  . "\\n";$/;"	v
+v	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^                $string .= '    $v = new $this->fields["' . $field['value']['value'] . '"]();' . "\\n";$/;"	v
+v	./unittest/php5.2/echo.php	/^    $v = $this->_add_arr_value("16");$/;"	v
+v	./unittest/php5.2/echo.php	/^    $v = $this->_get_arr_value("16", $offset);$/;"	v
+v	./unittest/php5.2/echo.php	/^    $v = new $this->fields["16"]();$/;"	v
+value	./bin/protobuf_php5.2_lib/message/pb_message.php	/^        $this->value = $this;$/;"	v
+value	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    var $value = null;$/;"	v
+value	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^				$value = substr('00000000', 0, 8 - strlen($value) % 8) . $value;$/;"	v
+value	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^			$value = decbin(ord($string));$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_bool.php	/^		$this->value = $this->reader->next();$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_bool.php	/^		$this->value = ($this->value != 0) ? 1 : 0;$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$this->value = $this->reader->get_message_from($pointer);$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^		$this->value = '';$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_enum.php	/^		$this->value = $this->reader->next();$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_enum.php	/^		$value = $this->base128->set_value($this->value);$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_int.php	/^		$this->value = $this->reader->varint();$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_int.php	/^		$value = $this->base128->set_value($this->value);$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_scalar.php	/^		$this->value = $value;	$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^			$this->value = $this->value*2;$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^			$this->value = -($this->value);$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^			$this->value = abs($this->value)*2-1;$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$this->value = $save;$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^		$this->value = round($this->value \/ 2);$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^		$this->value = $this->reader->get_message_from($pointer);$/;"	v
+value	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^		$this->value = '';$/;"	v
+values	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    var $values = array();$/;"	v
+valuestring	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^            $valuestring = substr($string, $i, 7) . $valuestring;$/;"	v
+valuestring	./bin/protobuf_php5.2_lib/message/encoding/pb_base128.php	/^        $valuestring = '';$/;"	v
+varint	./bin/protobuf_php5.2_lib/message/reader/pb_input_reader.php	/^    public abstract function varint();    $/;"	f
+varint	./bin/protobuf_php5.2_lib/message/reader/pb_input_string_reader.php	/^    public function varint() {$/;"	f
+version	./bin/protoc.php	/^$version = $phpver[0] * 100 + $phpver[1] * 10 ;$/;"	v
+version	./src/php5.2/PbProtocol.php	/^		$this->version = "1.0.0";$/;"	v
+version	./src/php5.2/PbProtocol.php	/^		$this->version = $version;$/;"	v
+version	./src/php5.2/PbProtocol.php	/^	private $version;                       \/\/版本号$/;"	v
+version	./src/php5.2/RpcTransport.php	/^		$this->version = $version;$/;"	v
+version	./src/php5.2/RpcTransport.php	/^		$this->version = 1000;$/;"	v
+version	./src/php5.2/RpcTransport.php	/^	private $version;                 \/\/nshead version$/;"	v
+version	./src/php5.2/protocol_phpv5.2.php	/^  function version()$/;"	f
+where	./bin/protobuf_php5.2_lib/message/pb_message.php	/^     * @param the PBMessage class where the request should be encoded$/;"	c
+wired_type	./bin/echo.php	/^  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;$/;"	v
+wired_type	./bin/protobuf_php5.2_lib/message/pb_message.php	/^    var $wired_type = 2;$/;"	v
+wired_type	./bin/protobuf_php5.2_lib/message/type/pb_bool.php	/^	var $wired_type = PBMessage::WIRED_VARINT;$/;"	v
+wired_type	./bin/protobuf_php5.2_lib/message/type/pb_bytes.php	/^	var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;$/;"	v
+wired_type	./bin/protobuf_php5.2_lib/message/type/pb_enum.php	/^	var $wired_type = PBMessage::WIRED_VARINT;$/;"	v
+wired_type	./bin/protobuf_php5.2_lib/message/type/pb_int.php	/^	var $wired_type = PBMessage::WIRED_VARINT;$/;"	v
+wired_type	./bin/protobuf_php5.2_lib/message/type/pb_signed_int.php	/^	var $wired_type = PBMessage::WIRED_VARINT;$/;"	v
+wired_type	./bin/protobuf_php5.2_lib/message/type/pb_string.php	/^	var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;$/;"	v
+wired_type	./bin/protobuf_php5.2_lib/parser/pb_parser.php	/^        $string .= '  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;' . "\\n";$/;"	v
+wired_type	./src/php5.2/protocol_phpv5.2.php	/^  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;$/;"	v
+wired_type	./unittest/php5.2/echo.php	/^  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;$/;"	v
+write_timeout_ms	./src/php5.2/RpcTransport.php	/^			$write_timeout_ms = $service['write_timeout_ms'];$/;"	v
+write_timeout_ms	./src/php5.2/RpcTransport.php	/^		$write_timeout_ms = 1000;$/;"	v
