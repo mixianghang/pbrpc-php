@@ -1,0 +1,40 @@
+message Protobuf_RpcRequestHead{
+    optional string from_host = 1;
+    optional int32 content_type = 2;
+    optional bool connection = 3;
+    optional string charset = 4;
+    optional string accept_charset = 5;
+    optional string create_time = 6;
+    optional int64 log_id = 7;
+    optional int32 compress_type = 8;
+}
+message Protobuf_RpcRequestBody{
+    optional string version = 1;
+    optional string charset = 2;
+    required string service = 3;
+    required int32 method_id = 4;
+    required int64 id = 5;
+    optional bytes serialized_request = 6;
+}
+message Protobuf_RpcResponseHead{
+    required int32 code = 1;
+    optional string text = 2;
+    optional string from_host = 3;
+    optional int32 compress_type = 4;
+}
+message Protobuf_RpcResponseBody{
+    optional bytes serialized_response = 1;
+    optional string version = 2;
+    optional int32 error = 3;
+    required int64 id = 4;
+}
+
+message Protobuf_RpcRequest{
+    optional Protobuf_RpcRequestHead requestHead = 1;
+    repeated Protobuf_RpcRequestBody requestBody = 2;
+}
+
+message Protobuf_RpcResponse{
+    optional Protobuf_RpcResponseHead responseHead = 1;
+    repeated Protobuf_RpcResponseBody responseBody = 2;
+}
