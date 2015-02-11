@@ -24,12 +24,12 @@ class Protobuf_Rpc_Request extends ProtobufMessage
         self::REQUESTHEAD => array(
             'name' => 'requestHead',
             'required' => false,
-            'type' => 'ProtobufRpcRequestHead'
+            'type' => 'Protobuf_Rpc_RequestHead'
         ),
         self::REQUESTBODY => array(
             'name' => 'requestBody',
             'repeated' => true,
-            'type' => 'ProtobufRpcRequestBody'
+            'type' => 'Protobuf_Rpc_RequestBody'
         ),
     );
 
@@ -71,7 +71,7 @@ class Protobuf_Rpc_Request extends ProtobufMessage
      *
      * @return null
      */
-    public function setRequestHead(ProtobufRpcRequestHead $value)
+    public function setRequestHead(Protobuf_Rpc_RequestHead $value)
     {
         return $this->set(self::REQUESTHEAD, $value);
     }
@@ -93,7 +93,7 @@ class Protobuf_Rpc_Request extends ProtobufMessage
      *
      * @return null
      */
-    public function appendRequestBody(ProtobufRpcRequestBody $value)
+    public function appendRequestBody(Protobuf_Rpc_RequestBody $value)
     {
         return $this->append(self::REQUESTBODY, $value);
     }

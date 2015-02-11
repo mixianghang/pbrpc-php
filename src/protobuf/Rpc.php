@@ -18,8 +18,17 @@ class Protobuf_Rpc {
 	private $accept_charset  = 'utf-8';     //可接受的字符集
 	private $version         = '1.0.0';     //版本号
 	private $id;                            //请求的唯一标识
-	private $contentType     = 'html/text'  //消息类型
+	private $contentType     = 'html/text';  //消息类型
 	private $connectionType  = true;        //连接类型
+    private $serviceName;                   //serviceName
+    private $methodId;                      //methodId
+    private $requestStr;
+
+    public function __construct($requestStr, $serviceName, $methodId) {
+        $this->requestStr  = $requestStr;
+        $this->serviceName = $serviceName;
+        $this->methodId    = $methodId;
+    }
 
     /**
      * @brief 
@@ -27,7 +36,7 @@ class Protobuf_Rpc {
      * @author mixianghang
      * @date 2015/02/10 17:27:34
     **/
-    public function encode($request,$serviceName,$methodId) {
+    public function encode() {
         $rpcRequest = new Protobuf_Rpc_Request();
 		$requestHead = new Protobuf_Rpc_RequestHead();
 		$requestHead->setFromHost($this->getLocalIp());
@@ -37,17 +46,13 @@ class Protobuf_Rpc {
 		$requestHead->setAcceptCharset($this->getAcceptCharset());
 		$requestHead->setCreateTime($this->getLocalTime());
 		//$requestHead->setLogId($controller->getLogId());
-		$requestBody = new RequestBody();
+		$requestBody = new Protobuf_Rpc_RequestBody();
 		$requestBody->setVersion($this->getVersion());
 		$requestBody->setCharset($this->getCharset());
-		$requestBody->setService($serviceName);
-		$requestBody->setMethodId($methodId);
+		$requestBody->setService($this->getServiceName());
+		$requestBody->setMethodId($this->getMethodId());
 		$requestBody->setId($this->genid());
-        $result = $request->serializeToString();
-		if($result === null){
-			return null;
-		}
-		$requestBody->setSerializedRequest($result);
+		$requestBody->setSerializedRequest($this->getRequestStr());
 		$rpcRequest->setRequestHead($requestHead);
 		$rpcRequest->appendRequestBody($requestBody);
 
@@ -55,7 +60,7 @@ class Protobuf_Rpc {
 	
         return $requestData;
     }
-    public function decode($responseData,&$controller) {
+    public function decode($responseData) {
 
         $rpcResponse = new Protobuf_Rpc_Response();
         try{
@@ -73,7 +78,7 @@ class Protobuf_Rpc {
 		if($this->id != $responseBody->id()){
 			return null;
         }
-        return $responseBody->getrSerializedResponse();
+        return $responseBody->getSerializedResponse();
     }
 	/*
 	 * @brief 获取本地ip
@@ -226,5 +231,65 @@ class Protobuf_Rpc {
 	public function getConnectionType(){
 		return $this->connectionType;
 	}
+
+    /**
+     * @brief 设置service名称
+     * @return  
+     * @author mixianghang
+     * @date 2015/02/11 10:16:34
+    **/
+    public function setServiceName($serviceName) {
+        $this->serviceName = $serviceName;
+    }
+
+    /**
+     * @brief 获取service名称
+     * @return string 
+     * @author mixianghang
+     * @date 2015/02/11 10:19:59
+    **/
+    public function getServiceName() {
+        return $this->serviceName;
+    }
+
+    /**
+     * @brief 设置methodId
+     * @return  
+     * @author mixianghang
+     * @date 2015/02/11 10:16:34
+    **/
+    public function setMethodId($methodId) {
+        $this->methodId = $methodId;
+    }
+
+    /**
+     * @brief 获取method id
+     * @return string 
+     * @author mixianghang
+     * @date 2015/02/11 10:19:59
+    **/
+    public function getMethodId() {
+        return $this->methodId;
+    }
+    
+    /**
+     * @brief 设置请求字符串
+     * @return  
+     * @author mixianghang
+     * @date 2015/02/11 10:48:15
+    **/
+    public function setRequestStr($requestStr) {
+        $this->requestStr = $requestStr;
+    }
+    
+    /**
+     * @brief 获取请求字符串
+     * @return string 
+     * @author mixianghang
+     * @date 2015/02/11 10:48:44
+    **/
+    public function getRequestStr() {
+        return $this->requestStr;
+    }
 }
 /* vim: set ts=4 sw=4 sts=4 tw=100 */

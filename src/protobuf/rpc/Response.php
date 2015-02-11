@@ -24,12 +24,12 @@ class Protobuf_Rpc_Response extends ProtobufMessage
         self::RESPONSEHEAD => array(
             'name' => 'responseHead',
             'required' => false,
-            'type' => 'ProtobufRpcResponseHead'
+            'type' => 'Protobuf_Rpc_ResponseHead'
         ),
         self::RESPONSEBODY => array(
             'name' => 'responseBody',
             'repeated' => true,
-            'type' => 'ProtobufRpcResponseBody'
+            'type' => 'Protobuf_Rpc_ResponseBody'
         ),
     );
 
@@ -71,7 +71,7 @@ class Protobuf_Rpc_Response extends ProtobufMessage
      *
      * @return null
      */
-    public function setResponseHead(ProtobufRpcResponseHead $value)
+    public function setResponseHead(Protobuf_Rpc_ResponseHead $value)
     {
         return $this->set(self::RESPONSEHEAD, $value);
     }
@@ -93,7 +93,7 @@ class Protobuf_Rpc_Response extends ProtobufMessage
      *
      * @return null
      */
-    public function appendResponseBody(ProtobufRpcResponseBody $value)
+    public function appendResponseBody(Protobuf_Rpc_ResponseBody $value)
     {
         return $this->append(self::RESPONSEBODY, $value);
     }

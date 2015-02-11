@@ -13,16 +13,17 @@
  *  
  **/
 class Protobuf_Ral {
-    private $_serviceName;
 
     /**
      * @brief  发送protobuf message到服务器
+     * @param $message ProtobufMessage 请求的message
+     * @param $serviceName string ral 服务的名称
      * @return responseMessage
      * @author mixianghang
      * @date 2015/02/10 10:13:26
     **/
-    public function sendSingleMessage($message){
-        $result = new Protobuf_RalReuslt();
+    public function sendSingleMessage($message,$serviceName,$methodId=0){
+        $result = new Protobuf_RalResult();
         //是否是protobufMessage类型的请求数据
         if( !( $message instanceof ProtobufMessage ) ) {
             $errCode = Protobuf_ErrMap::CODE_INVALID_REQ_MSG;
@@ -42,6 +43,24 @@ class Protobuf_Ral {
             return $result;
         }
         //组装rpc数据
+        $protobufRpc = new Protobuf_Rpc($msgStr,$serviceName,$methodId);
+        $requestData = $protobufRpc->encode();
+        if( defined(LOG_ID) ) {
+            ral_set_logid(LOG_ID);
+        }
+        $responseStr = ral($serviceName,'post',$requestData,rand());
+        if( $responseStr===false ) {
+            $errCode = Protobuf_ErrMap::CODE_RAL_ERR;
+            $errMsg  = ral_get_error();
+            $result->setErrCode($errCode);
+            $result->setErrMsg($errMsg);
+            return $result;
+        }
+        $responseMsg = $protobufRpc->decode($responseStr);
+        $errCode = Protobuf_ErrMap::CODE_SUCCESS;
+        $result->setErrCode($errCode);
+        $result->setData($responseMsg);
+        return $result;
     }
 }
 
