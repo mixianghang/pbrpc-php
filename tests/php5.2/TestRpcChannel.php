@@ -1,7 +1,7 @@
 <?php
 $includedPath = get_include_path();
-$includedPath .= PATH_SEPARATOR.'/home/users/mixianghang/pbrpc/php5.2/pbrpc-client/src';
-$includedPath .= PATH_SEPARATOR.'/home/users/mixianghang/pbrpc/php5.2/pbrpc-client/bin/protobuf_php5.2_lib/message';
+$includedPath .= PATH_SEPARATOR.'/home/users/mixianghang/mywork/pbrpc-php/src';
+$includedPath .= PATH_SEPARATOR.'/home/users/mixianghang/mywork/pbrpc-php/bin/protobuf_php5.2_lib/message';
 set_include_path($includedPath);
 require_once 'php5.2/RpcChannel.php';
 require_once 'RpcController.php';
@@ -23,8 +23,8 @@ class TestRpcChannel extends PHPUnit_Framework_TestCase {
                 "retry" => 3,
                 "server" => array(
                     array (
-                        'host' => 'cp01-rdqa-dev399.cp01.baidu.com',
-                        'port' =>  10080,
+                        'host' => '127.0.0.1',
+                        'port' =>  8894,
                     ),
                 ),
             ),
@@ -46,7 +46,7 @@ class TestRpcChannel extends PHPUnit_Framework_TestCase {
 		$innerMessage -> set_email('mixianghang@baidu.com');
 		$innerMessage -> set_phone('15810663067');
 		$message = $innerMessage -> SerializeToString();
-		$request -> set_message($message);
+		$request -> set_message('echoReq1');
         $controller = new RpcController();
         $controller->setServiceName("EchoService");
         $controller->setMethodId(0);
@@ -56,9 +56,10 @@ class TestRpcChannel extends PHPUnit_Framework_TestCase {
             echo $controller->getErrorText();
         }
 		$resultMessage = $response->message();
+        print_r($resultMessage);
+        exit;
 		$resultInnerMessage = new InnerMessage();
 		$resultInnerMessage -> ParseFromString($resultMessage);
-		print_r($resultInnerMessage->name());
 		$this->assertEquals($resultInnerMessage->phone(),'15810663067');
 	}
 

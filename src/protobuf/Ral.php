@@ -48,7 +48,17 @@ class Protobuf_Ral {
         if( defined(LOG_ID) ) {
             ral_set_logid(LOG_ID);
         }
-        $responseStr = ral($serviceName,'post',$requestData,rand());
+        $header = array(
+            'id'        => 0,
+            'version'   => 1000,
+            'logid'     => 0,
+            'provider'  => 'sat-pbrpc',
+            'magic_num' => 0xfb709394,
+            'reserved'  => 0,
+            'body_len'  => strlen($requestData),
+        );
+        print_r('mixianghang'.strlen($requestData));
+        $responseStr = ral($serviceName,'',$requestData,rand());
         if( $responseStr===false ) {
             $errCode = Protobuf_ErrMap::CODE_RAL_ERR;
             $errMsg  = ral_get_error();
