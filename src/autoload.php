@@ -20,6 +20,7 @@ require_once('protobuf/Ral.php');
 require_once('protobuf/RalResult.php');
 require_once('protobuf/ErrMap.php');
 require_once('protobuf/Rpc.php');
+require_once('protobuf/RpcChannel.php');
 require_once('protobuf/rpc/RequestHead.php');
 require_once('protobuf/rpc/RequestBody.php');
 require_once('protobuf/rpc/Request.php');

@@ -57,8 +57,8 @@ class Protobuf_Ral {
             'reserved'  => 0,
             'body_len'  => strlen($requestData),
         );
-        print_r('mixianghang'.strlen($requestData));
-        $responseStr = ral($serviceName,'',$requestData,rand());
+        print_r(strlen($requestData));
+        $responseStr = ral($serviceName,'',$requestData,rand(),$header);
         if( $responseStr===false ) {
             $errCode = Protobuf_ErrMap::CODE_RAL_ERR;
             $errMsg  = ral_get_error();
