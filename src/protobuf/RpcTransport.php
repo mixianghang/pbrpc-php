@@ -17,10 +17,10 @@
  *  
  **/
 
-require_once(dirname(__FILE__).'/../RpcErrorno.php');
-require_once(dirname(__FILE__).'/../../include/connectpool/ConnectionMan.class.php');
-require_once(dirname(__FILE__).'/../Socket.php');
-require_once(dirname(__FILE__).'/../Transport.php');
+require_once(dirname(__FILE__).'/RpcErrorno.php');
+require_once(dirname(__FILE__).'/connectpool/ConnectionMan.class.php');
+require_once(dirname(__FILE__).'/Socket.php');
+require_once(dirname(__FILE__).'/Transport.php');
 
 class RpcTransport implements Transport {
 	private $key;                     //负载均衡因子     int

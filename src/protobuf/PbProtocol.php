@@ -17,7 +17,7 @@
  *  
  **/
 
-require_once(dirname(__FILE__).'/../RpcErrorno.php');
+require_once(dirname(__FILE__).'/RpcErrorno.php');
 class PbProtocol {
 	//private $_transport;                    //传输层
 	private $charset;                       //字符集

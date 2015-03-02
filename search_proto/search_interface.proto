@@ -13,7 +13,32 @@ package wmise;
 message Experiment {
     required string key = 1;        // 检索插件通过key获取对应的value
     optional string value = 2;      // value为string，因此，可做反序列化
-};
+}
+message RequestMeta {
+  // 以下所有字段均为必填项，且不能填非法参数，否则该请求直接被过滤掉
+
+  // 每个 request 的唯一标识符，便于在日志系统中追踪
+  // 某个 request 所产生的所有日志。不应该由外部修改，rtsr 会强制覆盖
+  optional uint64 hash = 1;
+  // 最终用户的 IP 地址，应由 web/wap/na 透传过来，用于统计用户请求
+  // 如果该请求确实不涉及用户，则应把请求发起源头的 IP 地址传过来
+  required string ip = 2;
+  // 终端类型，仅支持 webapp,na,wap 四种类型，小写
+  required string terminal = 3;
+  // 业务名称，推荐"部门名_业务名" 的方式，如 bainuo_ugc.
+  // 仅支持英文字母、数字、下划线三种字符
+  // 内部测试可以填写如 bainuo_ugc_test
+  required string business = 4;
+}
+
+message ResponseError {
+  // 错误代码，暂时统一指定
+  required sint32 code = 1;
+  // 错误信息。 注意这个字段是 repeated 的，也就是说可能会填充多条错误信息
+  // rtsr 会填充得比较随意，仅供调试查看，请勿透传给业务方。
+  repeated string msg = 2;
+}
+
 
 message SearchRequest {
     // main part
@@ -44,7 +69,8 @@ message SearchRequest {
     // for serving
     repeated ResultItem results     = 50;
     
-    extensions 100 to 2000;
+    //extensions 100 to 2000;
+   required  RequestMeta request_meta = 1000;
 }
 
 message SearchResponse {
@@ -62,7 +88,8 @@ message SearchResponse {
     repeated string debug_logs = 20;
     optional string monitor_log = 21;
     
-    extensions 100 to 2000;
+    //extensions 100 to 2000;
+    optional ResponseError response_error = 1000;
 }
 
 // please forget follow

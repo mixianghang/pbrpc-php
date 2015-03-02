@@ -5,8 +5,12 @@
 package wmise;
 
 message CustomContext {
-    extensions 100 to 2000;
-};
+    //extensions 100 to 2000;
+}
+message ResultShard {
+  // shard 编号。用于记录结果是从哪个 shard 来的
+  required uint32 index = 1;
+}
 
 message ResultItem {
     required int64 gid      = 1;    // GlobalID,    用于删除，全局去重
@@ -16,8 +20,8 @@ message ResultItem {
     
     // 请SR在 100 - 999段内进行扩展
     // 请用户在 1000 - 2000 段内进行扩展
-    extensions 100 to 2000;
-};
+    optional ResultShard result_shard = 100;
+}
 
 // end of file
 

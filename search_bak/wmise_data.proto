@@ -1,0 +1,307 @@
+// define the RTSE data structure
+// Usage: ../../../../../third-64/protobuf/bin/protoc --cpp_out=. wmise_data.proto
+// Author: yicou (liuyizhou@baidu.com, Yizhou Liu)
+
+package wmise;
+
+enum AnnotationType {
+    TEXT_FULL       = 1; ///< 按照字符串来建索引，不切词
+    TEXT_SEG        = 2; ///< 按照字符串来建索引，使用系统配置的NLP切词, not support!
+    TEXT_SEG_BY_SEP = 3; ///< 按照seperator进行切词
+    INT_RANGE       = 4; ///< 对于整形建立RANGE索引
+    REAL_RANGE      = 5; ///< for real range
+    INT_EQUAL       = 6; ///< 对于整形建立等于索引
+
+    TWO_DIME_RANGE  = 7;    // [yicou] 2015-01-15, 二维索引, 2d_range, two-dimension, 仅接受int64数据类型
+    
+    // 以下是用户扩展类型，框架将不进行处理，由用户自定义插件处理
+    USER_DEFINE0    = 50;
+    USER_DEFINE1    = 51;
+    USER_DEFINE2    = 52;
+    USER_DEFINE3    = 53;
+    USER_DEFINE4    = 54;
+    
+    USER_DEFINE5    = 55;
+    USER_DEFINE6    = 56;
+    USER_DEFINE7    = 57;
+    USER_DEFINE8    = 58;
+    USER_DEFINE9    = 59;
+    
+};
+
+// 索引标记 格式
+// 在内存中有一个 string->id 词表，应用设置都依靠schema_name来换取id
+message AnnotationSchema {
+    // 词表id, 取值为 1-255，0 代表error
+    required int32 schema_id = 1 [default = 0];
+    // schema名称，当构造schema时，需要使用名称来获取id；各种用户配置中，优先使用name来进行配置
+    required string schema_name = 2;
+    optional AnnotationType type = 3 [default = TEXT_FULL];
+
+    // for TEXT_FULL,TEXT_SEG,TEXT_SEG_BY_SEP
+    // 是否对于大小写进行统一，不统一的话无法用大写查到小写/小写查到大写
+    optional bool up_low_conversion   = 20 [default=true];
+    // 是否对于简繁体进行统一，不统一的话无法使用简体查到繁体/繁体查到简体
+    optional bool trans_conversion    = 21 [default=true];
+
+    // for TEXT_SEG, 30-39
+    
+    // for TEXT_SEG_BY_SEP
+    // 可以设多个分割符，比如",.;"，这样就会用3个字符中的任何一个都做分割，仅支持设置将一个字符单位设为分割符
+    optional string seperators        = 40;
+
+    // for INT_RANGE
+    // 较为频繁的范围上下限，和范围内的精度，超出范围的都会被混在一起
+    optional int64 int_min      = 50 [default=10];
+    optional int64 int_max      = 51 [default=100];
+    optional int64 int_accuracy = 52 [default=1];
+
+    // for REAL_RANGE
+    optional double real_min      = 60 [default=10.0];
+    optional double real_max      = 61 [default=100.0];
+    optional double real_accuracy = 62 [default=1.0];
+
+    // for INT_RANGE,REAL_RANGE,TWO_DIME_RANGE 范围索引的最高层级
+    optional int32 max_range_level = 70 [default = 8];
+    
+    // [yicou] 2015-01-15, for TWO_DIME_RANGE
+    optional int64 x_min      = 80 [default=0];
+    optional int64 x_max      = 81 [default=10000];
+    optional int64 y_min      = 82 [default=0];
+    optional int64 y_max      = 83 [default=10000];
+    optional int64 x_accuracy = 84 [default=100];
+    optional int64 y_accuracy = 85 [default=100];
+    
+    extensions 100 to 2000; // [yicou] 2015-01-15, 100-1000 用于添加系统扩展， 1000-2000 用于用户自定义扩展
+};
+
+// 分区：用于在一个Schema下对于多个参数做二次区分
+// 分区，当一个doc使用相同的索引方式索引了多个数据时，用于进行部分筛选
+message Section {
+    // 取值范围：1~15, 0 for error
+    required int32 section_id = 1 [default = 0];
+    // 名称，配置时，和检索时都默认使用name来做筛选
+    required string section_name = 2;
+};
+
+// 词
+message Token {
+    // 内部分配id，在做词表时，id固定/动态分配；后继新增词都动态分配，分配规则：递增分配
+    required int32 token_id = 1;
+    // 词表内容，默认为全小写，简体。如果不使用大小写统一的话，也可能会有大写；简繁体同理
+    required string token_str = 2;
+};
+
+message DataConfig {
+    repeated AnnotationSchema schemas = 1;
+    repeated Section sections = 2;
+};
+
+// 索引内容
+message Annotation {
+    // 对应的Schema的ID,用于表明构建索引的方式
+    required int32 schema_id = 1;
+    // 对应的SectionID，用于再次筛选
+    optional int32 section_id = 2 [default = 0];
+
+    // 优先使用str值,其次是int值,最后是real值
+    optional string str_value = 3;
+    optional int64 int_value = 4;
+    optional double real_value = 5;
+    
+    // 对应着rpc中的schema_prefix，使用一种与section不同的方式进行再次筛选，可以更好的提升检索性能
+    optional string prefix = 6;
+    repeated string prefixs = 7;    // [yicou], 2015-02-04
+};
+
+enum CapitalInfo {
+    ALL_LOWER = 0;      // 全小写
+    ALL_UPPER = 1;      // 全大写
+    FIRST_UPPER = 2;    // 首字母大写
+    OTHER = 3;          // 其他
+};
+
+// 分词的其他信息，本地会进行存储，但是并不用于索引，请使用方扩展
+message SegInfo {
+    extensions 10 to 2000;
+}
+
+message SegWord {
+    required string word            = 1;                    // 分词后的内容
+    // 如果分词器进行了大小写/简繁体归一化的话，请填写如下信息
+    optional CapitalInfo cap_info   = 2 [default = OTHER];  // 原始大小写信息
+    optional bool is_tradition      = 3 [default = false];  // 原始内容是否是繁体
+    
+    optional SegInfo info           = 10;
+}
+
+// 索引命中属性
+message TokenHitAttr {
+    required int32 schema_id = 1;   // 8bits
+    optional int32 section_id = 2 [default=0];  // 4bits
+    optional CapitalInfo cap_info = 3 [default = OTHER];  // 2bits
+    optional bool is_tradition = 4 [default = false];   // 1bit
+    optional bool more_pos = 5 [default = false];       // 1bit at 倒排/压缩正排
+    optional bool has_token_id = 6 [default = false];   // 非压缩正排
+    // repeated int64 pos_list = 7; // [yicou] 2015-01-15, not used 一个TokenHit里面只放一个位置
+    optional int32 pos_idx = 8 [default=0];     // [yicou] 2015-01-15, 所有该Doc的所有TokenHit排序位置，也就是分词后相对位置
+    optional int32 fid = 9 [default = 0];  // Token Prefix ID
+    repeated int32 fids = 10;   // Token Prefix IDs, [yicou] 2015-02-04
+};
+
+// 索引命中结构
+message TokenHit {
+    required int32 tid = 1;             // TokenID
+    required int32 lid = 2;             // LocalID
+    required int32 doc_score = 3;       // DocScore
+    required TokenHitAttr attr = 4;     // Attr
+    optional int32 next_pos = 5;        // [yicou] 2015-01-15, 一个Doc可能会分出多个相同的TokenHit(tid相同，在此记录下一个位置，用于多重遍历)
+    optional SegInfo seg_info = 6;      // [yicou] 2015-01-15, 自行扩展的分词信息
+};
+
+// 查询数值节点
+message QueryValueNode {
+    // schema 1/2, use name first, required
+     optional int32 schema_id = 1;
+     optional string schema_name = 2;
+     // section 1/2, use name first, optional
+     optional int32 section_id = 3;
+     optional string section_name = 4;
+     
+     // 优先使用str值,其次是int值,最后是real值
+    optional string str_value = 5;
+    optional int64 int_value = 6;
+    optional double real_value = 7;
+    
+    // 对应 schema_prefix，使用一种与section不同的方式进行再次筛选，可以更好的提升检索性能
+    optional string prefix = 8;
+};
+
+enum QueryNodeType {
+    VALUE = 0;
+    NOT = 1;    // not support now! NOT only used below AND!
+    AND = 2;
+    OR = 3;
+    XOR = 4;    // not support now
+    RANGE = 5;
+    RANGE_2D = 6;   // [yicou] 2015-01-15, 2d_range
+};
+
+message QueryIntRange {
+    // schema 1/2, use name first, required
+     optional int32 schema_id = 1;
+     optional string schema_name = 2;
+     // section 1/2, use name first, optional
+     optional int32 section_id = 3;
+     optional string section_name = 4;
+
+    // 对应 schema_prefix，使用一种与section不同的方式进行再次筛选，可以更好的提升检索性能
+    optional string prefix = 8;
+
+    required int64 min = 11;
+    required int64 max = 12;
+};
+
+message QueryRealRange {
+    // schema 1/2, use name first, required
+     optional int32 schema_id = 1;
+     optional string schema_name = 2;
+     // section 1/2, use name first, optional
+     optional int32 section_id = 3;
+     optional string section_name = 4;
+
+    // 对应 schema_prefix，使用一种与section不同的方式进行再次筛选，可以更好的提升检索性能
+    optional string prefix = 8;
+
+    required double min = 11;
+    required double max = 12;
+};
+
+// [yicou] 2015-01-15, RANGE_2D
+message QueryRange2D {
+    // schema 1/2, use name first, required
+     optional int32 schema_id = 1;
+     optional string schema_name = 2;
+     // section 1/2, use name first, optional
+     optional int32 section_id = 3;
+     optional string section_name = 4;
+
+    // 对应 schema_prefix，使用一种与section不同的方式进行再次筛选，可以更好的提升检索性能
+    optional string prefix = 8;
+     
+    required int64 x_min = 11;
+    required int64 x_max = 12;
+    required int64 y_min = 13;
+    required int64 y_max = 14;
+}
+
+// 查询节点
+message QueryNode {
+    required QueryNodeType type = 1;
+    optional QueryValueNode value = 2;
+    repeated QueryNode children = 3;
+    // 优先使用int_range
+    optional QueryIntRange int_range = 4;
+    optional QueryRealRange real_range = 5;
+    optional QueryRange2D range_2d = 6;     // [yicou] 2015-01-15, RANGE_2D
+    
+    extensions 100 to 2000; // [yicou] 2015-01-15, 100-1000 用于添加系统扩展， 1000-2000 用于用户自定义扩展
+};
+
+// 命中索引结构
+message MatchedAnnotation {
+    // 用于检索的QueryNode, 类型为VALUE/RANGE，也即最底层的QueryNode
+    required QueryNode node = 1;
+    // 被检索出来的Hit信息,如果一个QueryNode会命中同一个Doc的多个TokenHit，此时会有多个TokenHit
+    repeated TokenHit hits = 2;
+};
+
+enum AttachMode {
+    TOKEN_HITS      = 1;    // 保存TokenHit
+    POS_AND_SEGINFO = 2;    // 保存Pos以及Seginfo
+    POS_AND_SEGDATA = 3;    // 保存Pos以及Seginfo二进制(未实现)
+};
+
+// 在一次和二次检索中都可以拿到
+message Attachment {
+    // plz use optional define, like below
+    // attach的gid用于填补一次检索的gid
+    optional int64 gid = 1;
+    // 中间数据，一般不进行返回
+    optional AttachMode mode        = 2;
+    // 如果使用比较节省计算资源的方式就直接存下TokenHits列表
+    repeated TokenHit tokenhits     = 3;
+    // 如果想节省存储就只存next_pos以及seginfo/segdata
+    repeated int32 next_posts       = 4;
+    repeated int32 section_ids      = 5;
+    repeated SegInfo segs           = 6;
+    repeated bytes segdatas         = 7;
+    extensions 100 to 2000;
+};
+
+// 仅在二次检索中可以拿到
+message ExtAttachment {
+    extensions 100 to 2000;
+};
+
+// 基础的Doc文档，FactDoc和MatchedDoc都是派生
+message BaseDoc {   // like MergedDoc
+    required int64 gid = 1;                         // 全局唯一标识
+    optional int32 lid = 2 [default = -1];          // 实例内唯一标识，内部分配
+    optional int32 doc_score = 3 [default = 0];     // 文档得分,用于文档入索引排序
+    optional string dimension = 4;                  // 维度，暂时不用
+    optional double score = 5 [default = 0.0];      // 用于记录计算出来的得分，Scorer之后才可以得到值
+    optional Attachment attach = 6;                 // 在一次和二次检索中都可以拿到
+    optional ExtAttachment ext_attach = 7;          // 仅在二次检索中可以拿到
+    
+    // 仅在FactDoc中,用于标记所有的索引
+    repeated Annotation annotations = 10;
+    // 仅在MatchDoc中,用于标记命中的索引,及相关信息
+    repeated MatchedAnnotation matched_annotations = 11;
+    // 该项的debug log
+    repeated string debug_logs = 13;
+    extensions 100 to 2000;
+};
+
+// end of file
+

@@ -1,0 +1,81 @@
+// define the wmise search interface
+// Usage: ../../../../../third-64/protobuf/bin/protoc --cpp_out=. search_interface.proto
+// Author: liaohongliu (liaohongliu@baidu.com, liaohongliu)
+
+//option cc_generic_services = true;
+
+import "service_strategy.proto";
+import "wmise_data.proto";
+
+package wmise;
+
+/// @brief 实验参数
+message Experiment {
+    required string key = 1;        // 检索插件通过key获取对应的value
+    optional string value = 2;      // value为string，因此，可做反序列化
+};
+
+message SearchRequest {
+    // main part
+    optional int32 id           = 1 [default = 0];      // uniq id, like logid, for cancle / page roll
+    optional int32 limit        = 2 [default = 10];     // max return result size
+    optional int32 start        = 3 [default = 0];      // result start idx, start at 0
+    optional int32 timeout      = 4 [default = 100];    // in ms
+    repeated Experiment exps    = 5;    // exp params
+    optional string query       = 6;    // for search
+    optional bool cache         = 7 [default = true];   // weather could use cache
+    optional QueryNode query_node = 8;  // 搜索条件
+    optional CustomContext ccxt = 9;    // custom context
+    optional string dimension   = 10;   // 维度，预留，暂时不用
+
+    // retrive part
+    optional int32 retrieve_timeout = 21 [default = 500];       // 检索超时时间，该时间大于timeout时，使用timeout, in ms
+    optional int32 retrieve_depth   = 22 [default = 2000];      // 满足查询条件的被从倒排中拉出来的最多doc数目
+    optional int32 recall_docs      = 23 [default = 1000];      // 经过filter/score/cluster后，保留满足条件的docs数目，mainly used in cache!
+
+    // serving part
+    optional double serving_factor  = 31 [default = 2.0];       // serving factor of limit
+
+    // for debug
+    optional bool debug_on_responce = 41 [default = false];     // return debug log at response
+    optional bool debug_on_server   = 42 [default = false];     // print debug log on server
+    optional int32 debug_level      = 43 [default = 0];         // fatal:0, warning/monitor:1, info:2, debug:3, trace:4
+    
+    // for serving
+    repeated ResultItem results     = 50;
+    
+    extensions 100 to 2000;
+}
+
+message SearchResponse {
+    repeated ResultItem results = 1;
+    optional int32 num_results = 2;             // 返回多少个结果
+    optional int32 end_idx = 3;                 // 最后一个返回结果序号，用于在出现问题时，翻页不混乱
+    optional int64 estimated_num_results = 4;   // 预计有多少结果
+    optional int64 docs_retrieved = 5;          // 实际检索到多少结果 <= retrieve_depth
+    optional int64 docs_recalled = 6;           // 实际召回了多少结果 <= recall_docs
+    optional int32 search_time = 7;             // 检索耗时, in ns, 10^-9s
+    repeated Experiment exps = 10;              // exp params, for return more infos
+    repeated Experiment statistics = 11;        // 统计信息
+    
+    // [yicou] 2015-01-15, log info
+    repeated string debug_logs = 20;
+    optional string monitor_log = 21;
+    
+    extensions 100 to 2000;
+}
+
+// please forget follow
+//service SearchService {
+//    // 整体的搜索接口，不推荐直接使用，可以使用后面2个接口分别执行
+//    rpc search (SearchRequest) returns (SearchResponse);
+//    
+//    // 一次检索 Retrieve: 返回不超过recall_docs数量的结果，供SR混排
+//    // 每个ResultItem只有gid/lid/score等少数几个基础数据
+//    rpc retrieve    (SearchRequest) returns (SearchResponse);
+//    // 二次检索 Serving: 传入一个ResultItem列表，通过每个数据项的lid/gid进行数据获取，并返回用户需要的全部数据
+//    rpc serving     (SearchRequest) returns (SearchResponse);
+//}
+
+// end of file
+

@@ -1,0 +1,23 @@
+// define the wmise service strategy data structure
+// Usage: ../../../../../third-64/protobuf/bin/protoc --cpp_out=. service_strategy.proto
+// Author: liaohongliu (liaohongliu@baidu.com, Yizhou Liu)
+
+package wmise;
+
+message CustomContext {
+    extensions 100 to 2000;
+};
+
+message ResultItem {
+    required int64 gid      = 1;    // GlobalID,    用于删除，全局去重
+    required int32 lid      = 2;    // LocalID,     用于在二次检索中获取数据
+    optional double score   = 3 [default = 0.0];    // 一次检索后的得分，用于在SR混排
+    repeated string debug_logs = 10;
+    
+    // 请SR在 100 - 999段内进行扩展
+    // 请用户在 1000 - 2000 段内进行扩展
+    extensions 100 to 2000;
+};
+
+// end of file
+

@@ -17,10 +17,10 @@
  *  
  **/
 
-require_once(dirname(__FILE__).'/../RpcErrorno.php');
-require_once(dirname(__FILE__).'/../RpcController.php');
-require_once(dirname(__FILE__).'/./PbProtocol.php');
-require_once(dirname(__FILE__).'/./RpcTransport.php');
+require_once(dirname(__FILE__).'/RpcErrorno.php');
+require_once(dirname(__FILE__).'/RpcController.php');
+require_once(dirname(__FILE__).'/PbProtocol.php');
+require_once(dirname(__FILE__).'/RpcTransport.php');
 class Protobuf_RpcChannel{
     
     private $protocol;                     //协议层            class PbProtocol

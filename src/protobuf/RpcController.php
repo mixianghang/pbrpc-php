@@ -17,7 +17,7 @@
  *  
  **/
 
-class RpcController{
+class Protobuf_RpcController{
 	private $channel_name;                 //管道名称
 	private $log_id;                       //日志id
 	private $method;                       //请求方法名

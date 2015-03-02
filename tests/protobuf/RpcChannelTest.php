@@ -24,7 +24,7 @@ if( is_array($testData) && ( !empty($testData) ) ) {
 }
 class RpcChannelTest {
     public function testRpcChannel($rpcChannel,$message,$serviceName){
-        $controller = new RpcController();
+        $controller = new Protobuf_RpcController();
         $controller->setServiceName($serviceName);
         $controller->setMethodId(0);
         $echoResponse = new EchoResponse();
@@ -60,7 +60,7 @@ class RpcChannelTest {
                 ),
             ),
         );
-        $rpcChannel = new RpcChannel($config);
+        $rpcChannel = new Protobuf_RpcChannel($config);
         return array(
             array(
                 $rpcChannel,
