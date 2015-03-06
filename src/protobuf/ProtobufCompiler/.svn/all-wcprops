@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/inf/odp/!svn/ver/32946/trunk/php-ext/protobuf/ProtobufCompiler
+END
+CodeStringBuffer.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/inf/odp/!svn/ver/32945/trunk/php-ext/protobuf/ProtobufCompiler/CodeStringBuffer.php
+END
+ProtobufParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/inf/odp/!svn/ver/32946/trunk/php-ext/protobuf/ProtobufCompiler/ProtobufParser.php
+END
+FileDescriptor.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/inf/odp/!svn/ver/32945/trunk/php-ext/protobuf/ProtobufCompiler/FileDescriptor.php
+END
+DescriptorInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/inf/odp/!svn/ver/32945/trunk/php-ext/protobuf/ProtobufCompiler/DescriptorInterface.php
+END
+EnumValueDescriptor.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/inf/odp/!svn/ver/32945/trunk/php-ext/protobuf/ProtobufCompiler/EnumValueDescriptor.php
+END
+FieldDescriptor.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/inf/odp/!svn/ver/32946/trunk/php-ext/protobuf/ProtobufCompiler/FieldDescriptor.php
+END
+CommentStringBuffer.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/inf/odp/!svn/ver/32945/trunk/php-ext/protobuf/ProtobufCompiler/CommentStringBuffer.php
+END
+EnumDescriptor.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/inf/odp/!svn/ver/32945/trunk/php-ext/protobuf/ProtobufCompiler/EnumDescriptor.php
+END
+FieldLabel.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/inf/odp/!svn/ver/32945/trunk/php-ext/protobuf/ProtobufCompiler/FieldLabel.php
+END
+MessageDescriptor.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/inf/odp/!svn/ver/32945/trunk/php-ext/protobuf/ProtobufCompiler/MessageDescriptor.php
+END
