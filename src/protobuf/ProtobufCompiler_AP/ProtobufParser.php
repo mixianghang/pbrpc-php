@@ -27,11 +27,19 @@ class ProtobufParser
 
     private $_hasSplTypes = false;
     private $_useNativeNamespaces = false;
+    private $_prefix = '';
+    private $_outdir;
 
-    public function __construct($useNativeNamespaces = null)
+    public function __construct($useNativeNamespaces = null,$prefix='',$outdir=null)
     {
         $this->_hasSplTypes = extension_loaded('SPL_Types');
         $this->_useNativeNamespaces = (boolean)$useNativeNamespaces;
+        $this->_prefix = $prefix;
+        if( empty($outdir) ) {
+            $this->_outdir = dirname(__FILE__);
+        } else {
+            $this->_outdir = $outdir;
+        }
     }
 
     /**
@@ -53,6 +61,23 @@ class ProtobufParser
     {
         return $this->_useNativeNamespaces
             ? self::NAMESPACE_SEPARATOR_NATIVE : self::NAMESPACE_SEPARATOR;
+    }
+    
+    /**
+     * @brief  根据前缀，生成类名的一部分
+     * @return  
+     * @author mixianghang
+     * @date 2015/03/06 16:00:44
+    **/
+    public function createPrefixName($prefix) {
+        $components = explode('.',$prefix);
+        $prefixName = '';
+        foreach($components as $component) {
+            if ( strlen($component) >0 ) {
+                $prefixName .= $this->getNamespaceSeparator() . ucfirst($component);
+            }
+        }
+        return trim($prefixName, $this->getNamespaceSeparator());
     }
 
     /**
@@ -105,8 +130,11 @@ class ProtobufParser
      *
      * @return null
      */
-    public function parse($sourceFile, $outputFile = null)
+    public function parse($sourceFile, $ourdir=null)
     {
+        if( is_null($outdir) ) {
+            $outdir = $this->_outdir;
+        }
         $string = file_get_contents($sourceFile);
         $this->_file = new FileDescriptor($sourceFile);
         $this->_stripComments($string);
@@ -119,7 +147,7 @@ class ProtobufParser
         $this->_resolveNamespaces($file);
         $buffer = new CodeStringBuffer(self::TAB, self::EOL);
 
-        $this->_createClassFile($file, $buffer, $outputFile);
+        $this->_createClassFile($file, $buffer, $outdir);
 
         return $file;
     }
@@ -135,6 +163,9 @@ class ProtobufParser
     private function _createClass(
         MessageDescriptor $descriptor, CodeStringBuffer $buffer
     ) {
+        $prefixString = $buffer->__toString();
+        $buffer = new CodeStringBuffer(self::TAB, self::EOL);
+        $buffer->append($prefixString);
         foreach ($descriptor->getEnums() as $enum) {
             $this->_createEnum($enum, $buffer);
         }
@@ -176,6 +207,7 @@ class ProtobufParser
         if ($this->_useNativeNamespaces) {
             $buffer->append('}');
         }
+        $this->_putIntoFile($descriptor,$buffer);
     }
 
     /**
@@ -189,6 +221,9 @@ class ProtobufParser
     private function _createEnum(
         EnumDescriptor $descriptor, CodeStringBuffer $buffer
     ) {
+        $prefixString = $buffer->__toString();
+        $buffer = new CodeStringBuffer(self::TAB, self::EOL);
+        $buffer->append($prefixString);
         $buffer->newline();
 
         if ($this->_useNativeNamespaces) {
@@ -227,6 +262,17 @@ class ProtobufParser
         if ($this->_useNativeNamespaces) {
             $buffer->append('}');
         }
+        $this->_putIntoFile($descriptor,$buffer);
+    }
+
+    private function _putIntoFile(DescriptorInterface $descriptor, CodeStringBuffer $buffer) {
+        $outdir = $this->_outdir.DIRECTORY_SEPARATOR.$this->_createOutdir($descriptor);
+        @mkdir($outdir,0777,true);
+        if( !is_dir($outdir) ) {
+            throw new Exception('create dir failed');
+        }
+        $file   = $outdir.DIRECTORY_SEPARATOR.self::createTypeName($descriptor->getName()).'.php';
+        file_put_contents($file,'<?php'.PHP_EOL.$buffer);
     }
 
     /**
@@ -239,8 +285,21 @@ class ProtobufParser
      * @return null
      */
     private function _createClassFile(
-        FileDescriptor $file, CodeStringBuffer $buffer, $outputFile = null
+        FileDescriptor $file, CodeStringBuffer $buffer, $outdir
     ) {
+        $package = $file->getPackage();
+        $prefix  = $this->_prefix;
+        $dir = $outdir;
+        if( !empty($prefix) ) {
+            $dir .=  DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $prefix);
+        }
+        if( !empty($package) ) {
+            $dir .=  DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $package);
+        }
+        @mkdir($dir,0777,true);
+        if( !is_dir($dir) ) {
+            throw new Exception('create dir failed');
+        }
         $comment = new CommentStringBuffer(self::TAB, self::EOL);
         $date = strftime("%Y-%m-%d %H:%M:%S");
         $comment->append('Auto generated from ' . basename($file->getName()) . ' at ' . $date);
@@ -260,26 +319,26 @@ class ProtobufParser
             $this->_createClass($descriptor, $buffer);
         }
 
-        $requiresString = '';
+        //$requiresString = '';
 
-        foreach ($file->getDependencies() as $dependency) {
-            $requiresString .= sprintf(
-                'require_once \'%s\';',
-                $this->_createOutputFilename($dependency->getName())
-            );
-        }
+        //foreach ($file->getDependencies() as $dependency) {
+        //    $requiresString .= sprintf(
+        //        'require_once \'%s\';',
+        //        $this->_createOutputFilename($dependency->getName())
+        //    );
+        //}
 
-        if ($this->_useNativeNamespaces && !empty($requiresString)) {
-            $requiresString = 'namespace {' . PHP_EOL . $requiresString . PHP_EOL . '}';
-        }
+        //if ($this->_useNativeNamespaces && !empty($requiresString)) {
+        //    $requiresString = 'namespace {' . PHP_EOL . $requiresString . PHP_EOL . '}';
+        //}
 
-        $buffer->append($requiresString);
+        //$buffer->append($requiresString);
 
-        if ($outputFile == null) {
-            $outputFile = $this->_createOutputFilename($file->getName());
-        }
+        //if ($outputFile == null) {
+        //    $outputFile = $this->_createOutputFilename($file->getName());
+        //}
 
-        file_put_contents($outputFile, '<?php' . PHP_EOL . $buffer);
+        //file_put_contents($outputFile, '<?php' . PHP_EOL . $buffer);
     }
 
     /**
@@ -305,6 +364,10 @@ class ProtobufParser
         if (!empty($package)) {
             $namespace[] = $this->createPackageName($package);
         }
+        $prefix = $this->_prefix;
+        if( !empty($prefix) ) {
+            $namespace[] = $this->createPrefixName($prefix);
+        }
 
         $namespace = array_reverse($namespace);
 
@@ -312,6 +375,36 @@ class ProtobufParser
 
         return $name;
     }
+
+    private function _createOutdir(DescriptorInterface $descriptor)
+    {
+        $namespace = array();
+
+        $containing = $descriptor->getContaining();
+
+        while (!is_null($containing)) {
+            $namespace[] = self::createTypeName($containing->getName());
+            $containing = $containing->getContaining();
+        }
+
+        $package = $descriptor->getFile()->getPackage();
+
+        if (!empty($package)) {
+            $namespace[] = $this->createPackageName($package);
+        }
+        $prefix = $this->_prefix;
+        if( !empty($prefix) ) {
+            $namespace[] = $this->createPrefixName($prefix);
+        }
+
+        $namespace = array_reverse($namespace);
+
+        $name = implode($this->getNamespaceSeparator(), $namespace);
+        $name = str_replace($this->getNamespaceSeparator(),DIRECTORY_SEPARATOR,$name);
+
+        return strtolower($name);
+    }
+
 
     /**
      * Generates class name for given descriptor
@@ -877,6 +970,8 @@ class ProtobufParser
                 }
 
                 $includedFilename = $matches[1][0];
+                $includedFilename  = dirname($file->getName()) . DIRECTORY_SEPARATOR . $includedFilename;
+                echo $file->getName();
 
                 if (!file_exists($includedFilename)) {
                     throw new Exception(
@@ -894,7 +989,7 @@ class ProtobufParser
                 $parserKey = realpath($includedFilename);
 
                 if (!isset(self::$_parsers[$parserKey])) {
-                    $pbp = new ProtobufParser($this->_useNativeNamespaces);
+                    $pbp = new ProtobufParser($this->_useNativeNamespaces,$this->_prefix,$this->_outdir);
                     self::$_parsers[$parserKey] = $pbp;
                 }
 
@@ -935,6 +1030,8 @@ class ProtobufParser
                 );
 
                 if (!$match || !$parent) {
+                    print_r($messageContent);
+                    var_dump($parent);
                     throw new Exception('Proto file missformed');
                 }
 
@@ -1041,7 +1138,10 @@ class ProtobufParser
             }
 
             $namespace = $field->getNamespace();
-
+            /**field类型没有namespace，TypeDescriptor查找顺序
+             * message nested/enum > currentPackage > global namespace
+             * 有namespace的时候， typeDescriptor查找顺序 message nested/nested..... > namespace
+             */
             if (is_null($namespace)) {
                 if (($type = $descriptor->findType($field->getType())) !== false) {
                     $field->setTypeDescriptor($type);
@@ -1274,5 +1374,26 @@ class ProtobufParser
         $string = preg_replace('/\/\/.*/', '', $string);
         // now replace empty lines and whitespaces in front
         $string = preg_replace('/\\r?\\n\s*/', PHP_EOL, $string);
+    }
+    
+    /**
+     * @brief 设置类名称的前缀
+     * @param prefix string
+     * @return  
+     * @author mixianghang
+     * @date 2015/03/06 11:02:08
+    **/
+    public function setPrefix($prefix) {
+        $this->_prefix = $prefix;
+    }
+    
+    /**
+     * @brief 获取类名称的前缀
+     * @return string
+     * @author mixianghang
+     * @date 2015/03/06 11:03:01
+    **/
+    public function getPrefix() {
+        return $this->_prefix;
     }
 }
