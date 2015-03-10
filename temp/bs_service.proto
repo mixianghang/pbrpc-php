@@ -1,0 +1,197 @@
+package new_pb_interface;
+enum SortType {    
+    SORT_TYPE_WEIGHT = 0;           // 按照权重   
+    SORT_TYPE_PRICE = 1;    
+    SORT_TYPE_PRICE_DESC = 2;    
+    SORT_TYPE_REBATE = 3;   
+    SORT_TYPE_QUANTITY = 4;   
+    SORT_TYPE_USER_DISTANCE = 5;    
+    SORT_TYPE_LANDMARK_DISTANCE = 6;    
+    SORT_TYPE_TIME = 7; 
+    SORT_TYPE_COMMENT = 8;
+}
+message UserQueryInfo {  
+    required int32 is_new = 1;//是否新团单 
+    optional int32 is_goflush = 2;//是否闪电购   
+    optional int32 is_expired = 3;//是否包含过期团单   
+    optional int32 checkout_time = 4;//酒店失效时间  
+    required int64 city_id = 5; 
+    required int32 term_num = 6;//请求个数 团单 poi   
+    required int32 start_idx = 7;   
+    repeated int32 cate_id_list = 8;    
+    repeated int32 subcate_id_list = 9;    
+    repeated int32 thirdcate_id_list = 10;  
+    repeated int32 range_id_list = 11;   
+    repeated int32 dist_id_list = 12;   
+    required string tags = 13;   
+    required SortType sort_type = 14;    
+    optional PoiQueryInfo poi_query_info = 15;//poi查询相关信息  
+    optional int32 brand_only = 16;//团单包含品牌id  
+    optional KeywordQueryInfo keyword_query_info = 17;  
+    repeated int32 subway_line_id_list = 18;  
+    repeated int32 subway_station_id_list = 19; 
+    required int32 term_num_per_page = 20;//每页term个数 团单 poi  
+    optional int32 subterm_num_per_term = 21;//每个term下subterm个数 每个poi的goods个数  
+    required int32 pages_per_group = 22;//每个分段中分页的个数
+}
+message PoiQueryInfo {    
+    optional string poi_id = 1;    
+    repeated double border = 2;    
+    optional double x = 3;    
+    optional double y = 4;    
+    optional bool poi_goods_only = 5;    
+    repeated double border_small = 6;
+}
+
+message QueryRecallDemandNew {    
+    required int32 recall_type = 1;    
+    required int32 min_doc_level = 2;    
+    required int32 min_require_level = 3;
+}
+
+message KeywordQueryInfo {    
+    optional bytes keyword = 1;             // 查询词，as要传gbk格式的    
+    optional QueryRecallDemandNew recall_demand = 2;    
+    optional bytes query_detail_info = 3;   // QRW结果的Protobuf二进制，关键词流程必填！！！
+}
+
+enum ProviderType {   
+    REQUEST_COMMON = 0;    
+    REQUEST_FOR_APP_HOMEPAGE = 1;   
+    REQUEST_FOR_KEY_WORD = 2;    
+    REQUEST_FOR_GOODS_WEIGHT = 3;    
+    REQUEST_FOR_POI = 4;    
+    REQUEST_POI_GROUNPON = 5;    
+    REQUEST_NUOMI_KEYWORDS_POIMERGER = 6;    
+    REQUEST_FOR_POI_KEYWORD = 7;    
+    REQUEST_FOR_POIGROUPON = 8;    
+    REQUEST_FOR_POIMERGER = 9;    
+    REQUEST_GOODS_FACET = 10;
+}
+
+enum ChannelType {    
+    TG_CHANNEL_TYPE = 0;    
+    WX_CHANNEL_TYPE = 1;   
+    APP_CHANNEL_TYPE = 2;  
+    MP_CHANNEL_TYPE = 3;    
+    MM_CHANNEL_TYPE = 4;   
+    ZX_CHANNEL_TYPE = 5;   
+    NM_CHANNEL_TYPE = 6;    
+    NMW_CHANNEL_TYPE = 7;    
+    NMA_CHANNEL_TYPE = 8;    
+    TSM_CHANNEL_TYPE = 9;   
+    TSMA_CHANNEL_TYPE = 10;   
+    DEFAULT_CHANNEL_TYPE = 0;
+}
+
+message UserEnvironmentInfo {   
+    required string baidu_id = 1;    
+    optional string cuid = 2;    
+    optional string imei = 3;    
+    optional string tn = 4;    
+    optional string device_type = 5;    
+    optional string os_version = 6;
+}
+
+message UserFeatureUnitNew {  
+    required string name = 1;   
+    repeated string id = 2;   
+    repeated double value = 3;
+}
+
+message UserStayPointNew {   
+    required int32 type = 1;    
+    required double x = 2;    
+    required double y = 3;
+}
+
+message UserActionInfoNew{   
+    required int32 timestamp = 1; //行为时间    
+    required int32 action_type = 2; //行为类型    
+    required bytes param = 3;    //行为参数
+}
+
+message UserItemUnitNew {    
+    optional string id = 1;   
+    optional double score = 2;    
+    optional int32 type = 3;   
+    optional int32 date = 4;
+}
+
+message UserFeatureInfo{    
+    repeated UserFeatureUnitNew user_feature_list = 1;//用户个性化特征   
+    repeated UserStayPointNew user_staypoint_list = 2;    
+    repeated UserFeatureUnitNew user_rt_feature_list = 3; //用户实时个性化特征  
+    repeated UserActionInfoNew user_rt_actions = 4;  //实时用户行为序列   
+    repeated UserItemUnitNew user_item_list = 5; //用户item偏好
+}
+
+message DebugInfo {   
+    optional int32 verbose = 1;   
+    repeated int32 goods_id_list = 2;
+}
+
+message BSRequest {    
+    required ProviderType provider = 1;    
+    required string s_id = 2;   
+    optional ChannelType channel = 3;    
+    required UserEnvironmentInfo user_environ_info = 4;//用户环境信息    
+    required UserQueryInfo user_query_info = 5;//用户查询信息   
+    optional UserFeatureInfo user_info = 6;//用户信息  
+    optional DebugInfo debug_info = 7;//调试请求信息    
+    optional bytes interpose_rules = 8;//干预规则 保证召回   
+    optional string log_id = 9; 
+}
+
+message CoverLocation{   
+    optional int32 cover_location_type = 1;  
+    optional int32 cover_location_id = 2;//封面地标.目前仅包含地铁站 
+    optional int32 distance = 3;//封面地标距离
+}
+
+message TermDetail {    
+    required int32 term_id = 1;   
+    optional WeightInfo weight_info = 2;    
+    optional bool maybe_bad = 3;    
+    optional double distance = 4;   
+    required TriggerType trigger_type = 5;    
+    optional int32 interpose_pos = 6;    
+    optional CoverLocation cover_location = 7; 
+}
+
+message WeightInfo {    
+    required float weight = 1;  
+    optional int32 level = 2;
+}
+enum TriggerType {  
+    USER_LOCATION_RANGE_TRIGGER = 0;//用户border位置触发  
+    KEYWORD_TRIGGER = 1;//关键词触发    
+    CITY_CATG_TRIGGER = 2;//城市和一级分类触发   
+    CITY_SUBCATG_TRIGGER = 3;  
+    CITY_THIRDCATG_TRIGGER = 4;   
+    USER_PREFERENCE_TRIGGER = 5;//用户偏好触发   
+    USER_OFFICE_LOCATION_TRIGGER = 6;//用户常住地触发(公司)  
+    USER_HOME_LOCATION_TRIGGER = 7;//用户常住地触发(家) 
+     USER_LOCATION_TRIGGER = 8;   
+    POI_TRIGGER = 9;
+}
+
+message PoiDetail{   
+    required string poi_id     = 1;  
+    required int32 goods_id    = 2;  //封面goods_id  
+    optional int32 x           = 3;   
+    optional int32 y           = 4;    
+    optional double distance   = 5;   
+    repeated int32 goods_list  = 6;   
+    optional float weight      = 7;  //封面weight  
+    optional int32 level       = 8;
+};
+
+message BSResponse {  
+    repeated TermDetail term_detail_list = 1;//团单信息  
+    optional string facet_info = 2;//facet字符串   
+    optional int32 expired_num = 3;    
+    repeated PoiDetail poi_info_list = 4;   
+    repeated int32 expid_list = 5;   
+    optional int32 goods_num = 6;
+}
