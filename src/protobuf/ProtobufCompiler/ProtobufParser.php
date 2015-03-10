@@ -163,6 +163,9 @@ class ProtobufParser
     private function _createClass(
         MessageDescriptor $descriptor, CodeStringBuffer $buffer
     ) {
+        $prefixString = $buffer->__toString();
+        $buffer = new CodeStringBuffer(self::TAB, self::EOL);
+        $buffer->append($prefixString);
         foreach ($descriptor->getEnums() as $enum) {
             $this->_createEnum($enum, $buffer);
         }
@@ -204,6 +207,7 @@ class ProtobufParser
         if ($this->_useNativeNamespaces) {
             $buffer->append('}');
         }
+        $this->_putIntoFile($descriptor,$buffer);
     }
 
     /**
@@ -217,6 +221,9 @@ class ProtobufParser
     private function _createEnum(
         EnumDescriptor $descriptor, CodeStringBuffer $buffer
     ) {
+        $prefixString = $buffer->__toString();
+        $buffer = new CodeStringBuffer(self::TAB, self::EOL);
+        $buffer->append($prefixString);
         $buffer->newline();
 
         if ($this->_useNativeNamespaces) {
@@ -255,6 +262,17 @@ class ProtobufParser
         if ($this->_useNativeNamespaces) {
             $buffer->append('}');
         }
+        $this->_putIntoFile($descriptor,$buffer);
+    }
+
+    private function _putIntoFile(DescriptorInterface $descriptor, CodeStringBuffer $buffer) {
+        $outdir = $this->_outdir.DIRECTORY_SEPARATOR.$this->_createOutdir($descriptor);
+        @mkdir($outdir,0777,true);
+        if( !is_dir($outdir) ) {
+            throw new Exception('create dir failed');
+        }
+        $file   = $outdir.DIRECTORY_SEPARATOR.self::createTypeName($descriptor->getName()).'.php';
+        file_put_contents($file,'<?php'.PHP_EOL.$buffer);
     }
 
     /**
@@ -272,7 +290,6 @@ class ProtobufParser
         $package = $file->getPackage();
         $prefix  = $this->_prefix;
         $dir = $outdir;
-        var_dump($outdir);
         if( !empty($prefix) ) {
             $dir .=  DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $prefix);
         }
@@ -302,26 +319,26 @@ class ProtobufParser
             $this->_createClass($descriptor, $buffer);
         }
 
-        $requiresString = '';
+        //$requiresString = '';
 
-        foreach ($file->getDependencies() as $dependency) {
-            $requiresString .= sprintf(
-                'require_once \'%s\';',
-                $this->_createOutputFilename($dependency->getName())
-            );
-        }
+        //foreach ($file->getDependencies() as $dependency) {
+        //    $requiresString .= sprintf(
+        //        'require_once \'%s\';',
+        //        $this->_createOutputFilename($dependency->getName())
+        //    );
+        //}
 
-        if ($this->_useNativeNamespaces && !empty($requiresString)) {
-            $requiresString = 'namespace {' . PHP_EOL . $requiresString . PHP_EOL . '}';
-        }
+        //if ($this->_useNativeNamespaces && !empty($requiresString)) {
+        //    $requiresString = 'namespace {' . PHP_EOL . $requiresString . PHP_EOL . '}';
+        //}
 
-        $buffer->append($requiresString);
+        //$buffer->append($requiresString);
 
-        if ($outputFile == null) {
-            $outputFile = $this->_createOutputFilename($file->getName());
-        }
+        //if ($outputFile == null) {
+        //    $outputFile = $this->_createOutputFilename($file->getName());
+        //}
 
-        file_put_contents($outputFile, '<?php' . PHP_EOL . $buffer);
+        //file_put_contents($outputFile, '<?php' . PHP_EOL . $buffer);
     }
 
     /**
@@ -358,6 +375,36 @@ class ProtobufParser
 
         return $name;
     }
+
+    private function _createOutdir(DescriptorInterface $descriptor)
+    {
+        $namespace = array();
+
+        $containing = $descriptor->getContaining();
+
+        while (!is_null($containing)) {
+            $namespace[] = self::createTypeName($containing->getName());
+            $containing = $containing->getContaining();
+        }
+
+        $package = $descriptor->getFile()->getPackage();
+
+        if (!empty($package)) {
+            $namespace[] = $this->createPackageName($package);
+        }
+        $prefix = $this->_prefix;
+        if( !empty($prefix) ) {
+            $namespace[] = $this->createPrefixName($prefix);
+        }
+
+        $namespace = array_reverse($namespace);
+
+        $name = implode($this->getNamespaceSeparator(), $namespace);
+        $name = str_replace($this->getNamespaceSeparator(),DIRECTORY_SEPARATOR,$name);
+
+        return strtolower($name);
+    }
+
 
     /**
      * Generates class name for given descriptor
@@ -885,7 +932,6 @@ class ProtobufParser
                 );
 
                 $childMessage = new MessageDescriptor($name, $file, $parent);
-                echo $childMessage->getName();
                 $this->_parseMessageType($file, $content, $childMessage);
 
                 $messageContent = '' . trim(substr($messageContent, $offset['end']));
@@ -924,6 +970,8 @@ class ProtobufParser
                 }
 
                 $includedFilename = $matches[1][0];
+                $includedFilename  = dirname($file->getName()) . DIRECTORY_SEPARATOR . $includedFilename;
+                echo $file->getName();
 
                 if (!file_exists($includedFilename)) {
                     throw new Exception(
@@ -983,9 +1031,7 @@ class ProtobufParser
 
                 if (!$match || !$parent) {
                     print_r($messageContent);
-                    var_dump($match);
                     var_dump($parent);
-                    print_r($next);
                     throw new Exception('Proto file missformed');
                 }
 

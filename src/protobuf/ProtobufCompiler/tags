@@ -1,0 +1,323 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CodeStringBuffer	./CodeStringBuffer.php	/^class CodeStringBuffer$/;"	c
+CommentStringBuffer	./CommentStringBuffer.php	/^class CommentStringBuffer extends CodeStringBuffer$/;"	c
+DescriptorInterface	./DescriptorInterface.php	/^interface DescriptorInterface$/;"	i
+EnumDescriptor	./EnumDescriptor.php	/^class EnumDescriptor implements DescriptorInterface$/;"	c
+EnumValueDescriptor	./EnumValueDescriptor.php	/^class EnumValueDescriptor$/;"	c
+FieldDescriptor	./FieldDescriptor.php	/^class FieldDescriptor$/;"	c
+FieldLabel	./FieldLabel.php	/^class FieldLabel$/;"	c
+FileDescriptor	./FileDescriptor.php	/^class FileDescriptor$/;"	c
+MessageDescriptor	./MessageDescriptor.php	/^class MessageDescriptor implements DescriptorInterface$/;"	c
+ProtobufParser	./ProtobufParser.php	/^class ProtobufParser$/;"	c
+Ugc_Pb_Pack_Test_EchoRequest	./pb_proto_echo.php	/^class Ugc_Pb_Pack_Test_EchoRequest extends ProtobufMessage$/;"	c
+Ugc_Pb_Pack_Test_EchoRequest_NestedMessage	./pb_proto_echo.php	/^class Ugc_Pb_Pack_Test_EchoRequest_NestedMessage extends ProtobufMessage$/;"	c
+Ugc_Pb_Pack_Test_EchoResponse	./pb_proto_echo.php	/^class Ugc_Pb_Pack_Test_EchoResponse extends ProtobufMessage$/;"	c
+__construct	./CodeStringBuffer.php	/^    public function __construct($tabString = ' ', $newLineString = PHP_EOL)$/;"	f
+__construct	./EnumDescriptor.php	/^    public function __construct($/;"	f
+__construct	./EnumValueDescriptor.php	/^    public function __construct($name, $value)$/;"	f
+__construct	./FileDescriptor.php	/^    public function __construct($name)$/;"	f
+__construct	./MessageDescriptor.php	/^    public function __construct($/;"	f
+__construct	./ProtobufParser.php	/^            ->append('public function __construct()')$/;"	f
+__construct	./ProtobufParser.php	/^    public function __construct($useNativeNamespaces = null,$prefix='',$outdir=null)$/;"	f
+__construct	./pb_proto_echo.php	/^    public function __construct()$/;"	f
+__toString	./CodeStringBuffer.php	/^    public function __toString()$/;"	f
+__toString	./CommentStringBuffer.php	/^    public function __toString()$/;"	f
+_buffer	./CodeStringBuffer.php	/^    private $_buffer = array();$/;"	v
+_containing	./EnumDescriptor.php	/^        $this->_containing = $containing;$/;"	v
+_containing	./EnumDescriptor.php	/^    private $_containing;$/;"	v
+_containing	./MessageDescriptor.php	/^        $this->_containing = $containing;$/;"	v
+_containing	./MessageDescriptor.php	/^    private $_containing;$/;"	v
+_createClass	./ProtobufParser.php	/^    private function _createClass($/;"	f
+_createClassBody	./ProtobufParser.php	/^    private function _createClassBody($fields, CodeStringBuffer $buffer)$/;"	f
+_createClassConstructor	./ProtobufParser.php	/^    private function _createClassConstructor($fields, CodeStringBuffer $buffer)$/;"	f
+_createClassFile	./ProtobufParser.php	/^    private function _createClassFile($/;"	f
+_createClassName	./ProtobufParser.php	/^    private function _createClassName(DescriptorInterface $descriptor)$/;"	f
+_createEmbeddedMessagePath	./ProtobufParser.php	/^    private function _createEmbeddedMessagePath(DescriptorInterface $descriptor)$/;"	f
+_createEnum	./ProtobufParser.php	/^    private function _createEnum($/;"	f
+_createEnumClassDefinition	./ProtobufParser.php	/^    private function _createEnumClassDefinition($/;"	f
+_createNamespaceName	./ProtobufParser.php	/^    private function _createNamespaceName(DescriptorInterface $descriptor)$/;"	f
+_createOutDir	./ProtobufParser.php	/^    private function _createOutDir(DescriptorInterface $descriptor)$/;"	f
+_createOutputFilename	./ProtobufParser.php	/^    private function _createOutputFilename($sourceFilename)$/;"	f
+_default	./FieldDescriptor.php	/^        $this->_default = $default;$/;"	v
+_default	./FieldDescriptor.php	/^    private $_default;$/;"	v
+_dependencies	./FileDescriptor.php	/^    private $_dependencies = array();$/;"	v
+_describeRepeatedField	./ProtobufParser.php	/^    private function _describeRepeatedField($/;"	f
+_describeSingleField	./ProtobufParser.php	/^    private function _describeSingleField($/;"	f
+_enums	./FileDescriptor.php	/^    private $_enums = array();$/;"	v
+_enums	./MessageDescriptor.php	/^    private $_enums = array();$/;"	v
+_fields	./MessageDescriptor.php	/^    private $_fields = array();$/;"	v
+_file	./EnumDescriptor.php	/^        $this->_file = $file;$/;"	v
+_file	./EnumDescriptor.php	/^    private $_file;$/;"	v
+_file	./MessageDescriptor.php	/^        $this->_file = $file;$/;"	v
+_file	./MessageDescriptor.php	/^    private $_file;$/;"	v
+_file	./ProtobufParser.php	/^        $this->_file = new FileDescriptor($sourceFile);$/;"	v
+_file	./ProtobufParser.php	/^    private $_file = null;$/;"	v
+_getBeginEnd	./ProtobufParser.php	/^    private function _getBeginEnd($string, $char, $charend)$/;"	f
+_getIdentationString	./CodeStringBuffer.php	/^    private function _getIdentationString($identOffset = 0)$/;"	f
+_getType	./ProtobufParser.php	/^    private function _getType(FieldDescriptor $field)$/;"	f
+_globalNamespace	./ProtobufParser.php	/^    private static $_globalNamespace = '';$/;"	v
+_hasSplTypes	./ProtobufParser.php	/^        $this->_hasSplTypes = extension_loaded('SPL_Types');$/;"	v
+_hasSplTypes	./ProtobufParser.php	/^    private $_hasSplTypes = false;$/;"	v
+_identLevel	./CodeStringBuffer.php	/^        $this->_identLevel = max(0, $this->_identLevel - 1);$/;"	v
+_identLevel	./CodeStringBuffer.php	/^    private $_identLevel = 0;$/;"	v
+_label	./FieldDescriptor.php	/^        $this->_label = $label;$/;"	v
+_label	./FieldDescriptor.php	/^        return $this->_label == FieldLabel::OPTIONAL;$/;"	v
+_label	./FieldDescriptor.php	/^        return $this->_label == FieldLabel::REPEATED;$/;"	v
+_label	./FieldDescriptor.php	/^        return $this->_label == FieldLabel::REQUIRED;$/;"	v
+_label	./FieldDescriptor.php	/^    private $_label;$/;"	v
+_messages	./FileDescriptor.php	/^    private $_messages = array();$/;"	v
+_name	./EnumDescriptor.php	/^        $this->_name = $name;$/;"	v
+_name	./EnumDescriptor.php	/^    private $_name;$/;"	v
+_name	./EnumValueDescriptor.php	/^        $this->_name = $name;$/;"	v
+_name	./EnumValueDescriptor.php	/^    private $_name;$/;"	v
+_name	./FieldDescriptor.php	/^        $this->_name = $name;$/;"	v
+_name	./FieldDescriptor.php	/^    private $_name;$/;"	v
+_name	./FileDescriptor.php	/^        $this->_name = $name;$/;"	v
+_name	./FileDescriptor.php	/^    private $_name;$/;"	v
+_name	./MessageDescriptor.php	/^        $this->_name = $name;$/;"	v
+_name	./MessageDescriptor.php	/^    private $_name;$/;"	v
+_namespace	./FieldDescriptor.php	/^        $this->_namespace = $namespace;$/;"	v
+_namespace	./FieldDescriptor.php	/^    private $_namespace = null;$/;"	v
+_namespaces	./ProtobufParser.php	/^    private $_namespaces = array();$/;"	v
+_nested	./MessageDescriptor.php	/^    private $_nested = array();$/;"	v
+_next	./ProtobufParser.php	/^    private function _next($message)$/;"	f
+_number	./FieldDescriptor.php	/^        $this->_number = $number;$/;"	v
+_number	./FieldDescriptor.php	/^    private $_number;$/;"	v
+_outdir	./ProtobufParser.php	/^            $this->_outdir = $outdir;$/;"	v
+_outdir	./ProtobufParser.php	/^            $this->_outdir = dirname(__FILE__);$/;"	v
+_outdir	./ProtobufParser.php	/^    private $_outdir;$/;"	v
+_package	./FileDescriptor.php	/^        $this->_package = $package;$/;"	v
+_package	./FileDescriptor.php	/^    private $_package;$/;"	v
+_parseEnum	./ProtobufParser.php	/^    private function _parseEnum(EnumDescriptor $enum, $content)$/;"	f
+_parseField	./ProtobufParser.php	/^    private function _parseField($content)$/;"	f
+_parseMessageType	./ProtobufParser.php	/^    private function _parseMessageType($/;"	f
+_parsers	./ProtobufParser.php	/^    private static $_parsers = array();$/;"	v
+_prefix	./ProtobufParser.php	/^        $this->_prefix = $prefix;$/;"	v
+_prefix	./ProtobufParser.php	/^    private $_prefix = '';$/;"	v
+_putIntoFile	./ProtobufParser.php	/^    private function _putIntoFile($fileName, DescriptorInterface $descriptor, CodeStringBuffer $buffer) {$/;"	f
+_resolveMessageFieldTypes	./ProtobufParser.php	/^    private function _resolveMessageFieldTypes($/;"	f
+_resolveNamespaces	./ProtobufParser.php	/^    private function _resolveNamespaces(FileDescriptor $file)$/;"	f
+_scalarNativeTypes	./FieldDescriptor.php	/^    private static $_scalarNativeTypes = array($/;"	v
+_scalarTypes	./FieldDescriptor.php	/^    private static $_scalarTypes = array($/;"	v
+_stripComments	./ProtobufParser.php	/^    private function _stripComments(&$string)$/;"	f
+_type	./FieldDescriptor.php	/^        $this->_type = $type;$/;"	v
+_type	./FieldDescriptor.php	/^    private $_type;$/;"	v
+_typeDescriptor	./FieldDescriptor.php	/^        $this->_typeDescriptor = $typeDescriptor;$/;"	v
+_typeDescriptor	./FieldDescriptor.php	/^    private $_typeDescriptor = null;$/;"	v
+_types	./MessageDescriptor.php	/^    private $_types = array();$/;"	v
+_useNativeNamespaces	./ProtobufParser.php	/^        $this->_useNativeNamespaces = (boolean)$useNativeNamespaces;$/;"	v
+_useNativeNamespaces	./ProtobufParser.php	/^    private $_useNativeNamespaces = false;$/;"	v
+_value	./EnumValueDescriptor.php	/^        $this->_value = $value;$/;"	v
+_value	./EnumValueDescriptor.php	/^    private $_value;$/;"	v
+_values	./EnumDescriptor.php	/^    private $_values = array();$/;"	v
+addDependency	./FileDescriptor.php	/^    public function addDependency(FileDescriptor $dependency)$/;"	f
+addEnum	./FileDescriptor.php	/^    public function addEnum(EnumDescriptor $enum)$/;"	f
+addEnum	./MessageDescriptor.php	/^    public function addEnum(EnumDescriptor $enum)$/;"	f
+addField	./MessageDescriptor.php	/^    public function addField(FieldDescriptor $field)$/;"	f
+addMessage	./FileDescriptor.php	/^    public function addMessage(MessageDescriptor $message)$/;"	f
+addNested	./MessageDescriptor.php	/^    public function addNested(MessageDescriptor $nested)$/;"	f
+addValue	./EnumDescriptor.php	/^    public function addValue(EnumValueDescriptor $value)$/;"	f
+append	./CodeStringBuffer.php	/^    public function append($lines, $newline = false, $identOffset = 0)$/;"	f
+append	./CommentStringBuffer.php	/^    public function append($line, $newline = false, $identOffset = 0)$/;"	f
+append	./ProtobufParser.php	/^                'public function append' . $field->getCamelCaseName() . '(' . $argumentClass . '$value)'$/;"	f
+appendParam	./CommentStringBuffer.php	/^    public function appendParam($param, $value)$/;"	f
+argumentClass	./ProtobufParser.php	/^            $argumentClass = $typeName . ' ';$/;"	v
+argumentClass	./ProtobufParser.php	/^            $argumentClass = '';$/;"	v
+body	./ProtobufParser.php	/^     * Generates class body for given field descriptors list and$/;"	c
+buffer	./ProtobufParser.php	/^        $buffer = new CodeStringBuffer(self::TAB, self::EOL);$/;"	v
+childMessage	./ProtobufParser.php	/^                $childMessage = new MessageDescriptor($name, $file, $parent);$/;"	v
+chunks	./FieldDescriptor.php	/^        $chunks = preg_split('\/[^a-z0-9]\/is', $this->getName());$/;"	v
+className	./ProtobufParser.php	/^                        $className = $this->_createClassName($field->getTypeDescriptor());$/;"	v
+className	./ProtobufParser.php	/^                    $className = $this->_createClassName($field->getTypeDescriptor());$/;"	v
+clear	./ProtobufParser.php	/^            ->append('public function clear' . $field->getCamelCaseName() . '()')$/;"	f
+code	./ProtobufParser.php	/^     * Creates class code for given file descriptor$/;"	c
+comment	./ProtobufParser.php	/^        $comment = new CommentStringBuffer(self::TAB, self::EOL);$/;"	v
+components	./ProtobufParser.php	/^        $components = explode('.', $name);$/;"	v
+components	./ProtobufParser.php	/^        $components = explode('.',$prefix);$/;"	v
+components	./ProtobufParser.php	/^        $components = explode('_', $name);$/;"	v
+constructor	./ProtobufParser.php	/^     * Generates class constructor and params list$/;"	c
+containing	./MessageDescriptor.php	/^                    $containing = $containing->_nested[$n];$/;"	v
+containing	./MessageDescriptor.php	/^        $containing = $this;$/;"	v
+containing	./MessageDescriptor.php	/^        $name, FileDescriptor $file, MessageDescriptor $containing = null$/;"	v
+containing	./ProtobufParser.php	/^            $containing = $containing->getContaining();$/;"	v
+containing	./ProtobufParser.php	/^        $containing = $descriptor->getContaining();$/;"	v
+content	./ProtobufParser.php	/^                $content = trim($/;"	v
+content	./ProtobufParser.php	/^            $content = trim(substr($content, 0, $matches[0][1])) . ';';$/;"	v
+createPackageName	./ProtobufParser.php	/^    public function createPackageName($name)$/;"	f
+createPrefixName	./ProtobufParser.php	/^    public function createPrefixName($prefix) {$/;"	f
+createTypeName	./ProtobufParser.php	/^    public static function createTypeName($name)$/;"	f
+date	./ProtobufParser.php	/^        $date = strftime("%Y-%m-%d %H:%M:%S");$/;"	v
+decreaseIdentation	./CodeStringBuffer.php	/^    public function decreaseIdentation()$/;"	f
+definition	./ProtobufParser.php	/^     * Generates enum class definition$/;"	c
+description	./ProtobufParser.php	/^     * Generates class description and write it to buffer$/;"	c
+dir	./ProtobufParser.php	/^        $dir = $outdir;$/;"	v
+enum	./ProtobufParser.php	/^                $enum = new EnumDescriptor($name, $file, $parent);$/;"	v
+exists	./ProtobufParser.php	/^                $exists = $this->_namespaces[$file->getPackage()]$/;"	v
+exists	./ProtobufParser.php	/^                $exists = isset($this->_namespaces[$namespace][$field->getType()]);$/;"	v
+exists	./ProtobufParser.php	/^                $exists = isset($this->_namespaces[self::$_globalNamespace])$/;"	v
+field	./ProtobufParser.php	/^        $field = new FieldDescriptor();$/;"	v
+fields	./ProtobufParser.php	/^            ->append('protected static $fields = array(')$/;"	v
+fields	./ProtobufParser.php	/^            ->append('public function fields()')$/;"	f
+fields	./pb_proto_echo.php	/^    protected static $fields = array($/;"	v
+fields	./pb_proto_echo.php	/^    public function fields()$/;"	f
+file	./ProtobufParser.php	/^        $file   = $outdir.DIRECTORY_SEPARATOR.$fileName.'.php';$/;"	v
+file	./ProtobufParser.php	/^        $file = new FileDescriptor($sourceFile);$/;"	v
+file	./protoc-php.php	/^    $file = $argv[1];$/;"	v
+findType	./MessageDescriptor.php	/^    public function findType($name, $namespace = null)$/;"	f
+for	./CodeStringBuffer.php	/^ * Helper class for generating source code$/;"	c
+for	./CommentStringBuffer.php	/^ * Helper class for generating source code comments$/;"	c
+get	./ProtobufParser.php	/^                'public function get' . $field->getCamelCaseName() . 'At($offset)'$/;"	f
+get	./ProtobufParser.php	/^                'public function get' . $field->getCamelCaseName() . 'Iterator()'$/;"	f
+get	./ProtobufParser.php	/^            ->append('public function get' . $field->getCamelCaseName() . '()')$/;"	f
+get	./ProtobufParser.php	/^            ->append('public function get' . $field->getCamelCaseName() . 'Count()')$/;"	f
+getCamelCaseName	./FieldDescriptor.php	/^    public function getCamelCaseName()$/;"	f
+getConstName	./FieldDescriptor.php	/^    public function getConstName()$/;"	f
+getContaining	./DescriptorInterface.php	/^    public function getContaining();$/;"	f
+getContaining	./EnumDescriptor.php	/^    public function getContaining()$/;"	f
+getContaining	./MessageDescriptor.php	/^    public function getContaining()$/;"	f
+getDefault	./FieldDescriptor.php	/^    public function getDefault()$/;"	f
+getDependencies	./FileDescriptor.php	/^    public function getDependencies()$/;"	f
+getEnumValues	./ProtobufParser.php	/^            ->append('public function getEnumValues()')$/;"	f
+getEnums	./FileDescriptor.php	/^    public function getEnums()$/;"	f
+getEnums	./MessageDescriptor.php	/^    public function getEnums()$/;"	f
+getFields	./MessageDescriptor.php	/^    public function getFields()$/;"	f
+getFile	./DescriptorInterface.php	/^    public function getFile();$/;"	f
+getFile	./EnumDescriptor.php	/^    public function getFile()$/;"	f
+getFile	./MessageDescriptor.php	/^    public function getFile()$/;"	f
+getLabel	./FieldDescriptor.php	/^    public function getLabel()$/;"	f
+getMessage	./pb_proto_echo.php	/^    public function getMessage()$/;"	f
+getMessages	./FileDescriptor.php	/^    public function getMessages()$/;"	f
+getName	./DescriptorInterface.php	/^    public function getName();$/;"	f
+getName	./EnumDescriptor.php	/^    public function getName()$/;"	f
+getName	./EnumValueDescriptor.php	/^    public function getName()$/;"	f
+getName	./FieldDescriptor.php	/^    public function getName()$/;"	f
+getName	./FileDescriptor.php	/^    public function getName()$/;"	f
+getName	./MessageDescriptor.php	/^    public function getName()$/;"	f
+getNamespace	./FieldDescriptor.php	/^    public function getNamespace()$/;"	f
+getNamespaceSeparator	./ProtobufParser.php	/^    public function getNamespaceSeparator()$/;"	f
+getNamespaces	./ProtobufParser.php	/^    public function getNamespaces()$/;"	f
+getNested	./MessageDescriptor.php	/^    public function getNested()$/;"	f
+getNestedMessage	./pb_proto_echo.php	/^    public function getNestedMessage()$/;"	f
+getNumber	./FieldDescriptor.php	/^    public function getNumber()$/;"	f
+getPackage	./FileDescriptor.php	/^    public function getPackage()$/;"	f
+getPrefix	./ProtobufParser.php	/^    public function getPrefix() {$/;"	f
+getScalarType	./FieldDescriptor.php	/^    public function getScalarType()$/;"	f
+getType	./FieldDescriptor.php	/^    public function getType()$/;"	f
+getTypeDescriptor	./FieldDescriptor.php	/^    public function getTypeDescriptor()$/;"	f
+getTypeName	./FieldDescriptor.php	/^    public function getTypeName()$/;"	f
+getValue	./EnumValueDescriptor.php	/^    public function getValue()$/;"	f
+getValues	./EnumDescriptor.php	/^    public function getValues()$/;"	f
+identStr	./CodeStringBuffer.php	/^        $this->identStr = $tabString;$/;"	v
+identStr	./CodeStringBuffer.php	/^    protected $identStr = '';$/;"	v
+includedFilename	./ProtobufParser.php	/^                $includedFilename = $matches[1][0];$/;"	v
+increaseIdentation	./CodeStringBuffer.php	/^    public function increaseIdentation()$/;"	f
+isOptional	./FieldDescriptor.php	/^    public function isOptional()$/;"	f
+isProtobufScalarType	./FieldDescriptor.php	/^    public function isProtobufScalarType()$/;"	f
+isRepeated	./FieldDescriptor.php	/^    public function isRepeated()$/;"	f
+isRequired	./FieldDescriptor.php	/^    public function isRequired()$/;"	f
+isScalarType	./FieldDescriptor.php	/^    public function isScalarType()$/;"	f
+iterator	./protoc-php.php	/^    $iterator = new RegexIterator(new ArrayIterator($argv), '\/^-\/');$/;"	v
+key	./protoc-php.php	/^    foreach ($iterator as $key => $value) {$/;"	v
+label	./ProtobufParser.php	/^                $label = FieldLabel::OPTIONAL;$/;"	v
+label	./ProtobufParser.php	/^                $label = FieldLabel::REPEATED;$/;"	v
+label	./ProtobufParser.php	/^                $label = FieldLabel::REQUIRED;$/;"	v
+match	./ProtobufParser.php	/^                $match = preg_match($/;"	v
+match	./ProtobufParser.php	/^        $match = preg_match($/;"	v
+match	./ProtobufParser.php	/^        $match = preg_match_all('\/(.*);\\s?\/', $content, $matches);$/;"	v
+messageContent	./ProtobufParser.php	/^                $messageContent = '' . trim(substr($messageContent, $offset['end']));$/;"	v
+messageContent	./ProtobufParser.php	/^                $messageContent = preg_replace('\/^.+\\n\/', '', $messageContent);$/;"	v
+messageContent	./ProtobufParser.php	/^                $messageContent = trim($/;"	v
+messageContent	./ProtobufParser.php	/^                $messageContent = trim(substr($messageContent, strlen($next)));$/;"	v
+name	./ProtobufParser.php	/^                $name = $this->_next($messageContent);$/;"	v
+name	./ProtobufParser.php	/^                $name = self::NAMESPACE_SEPARATOR_NATIVE . $name;$/;"	v
+name	./ProtobufParser.php	/^                foreach ($descriptors as $name => $descriptor) {$/;"	v
+name	./ProtobufParser.php	/^            $name = $prefix . $this->getNamespaceSeparator() . $name;$/;"	v
+name	./ProtobufParser.php	/^            $name = $this->_createClassName($descriptor);$/;"	v
+name	./ProtobufParser.php	/^            $name = self::createTypeName($descriptor->getName());$/;"	v
+name	./ProtobufParser.php	/^        $name = '';$/;"	v
+name	./ProtobufParser.php	/^        $name = implode($this->getNamespaceSeparator(), $namespace);$/;"	v
+name	./ProtobufParser.php	/^        $name = implode(DIRECTORY_SEPARATOR, $namespace);$/;"	v
+name	./ProtobufParser.php	/^        $name = self::createTypeName($descriptor->getName());$/;"	v
+name	./ProtobufParser.php	/^     * Generates class name for given descriptor$/;"	c
+namespace	./MessageDescriptor.php	/^            $namespace = explode('.', $namespace);$/;"	v
+namespace	./MessageDescriptor.php	/^    public function findType($name, $namespace = null)$/;"	v
+namespace	./ProtobufParser.php	/^                    $namespace = '';$/;"	v
+namespace	./ProtobufParser.php	/^                    $namespace = substr($namespace, 1);$/;"	v
+namespace	./ProtobufParser.php	/^            $namespace = $field->getNamespace();$/;"	v
+namespace	./ProtobufParser.php	/^            foreach ($parser->getNamespaces() as $namespace => $descriptors) {$/;"	v
+namespace	./ProtobufParser.php	/^        $namespace = array();$/;"	v
+namespace	./ProtobufParser.php	/^        $namespace = array_reverse($namespace);$/;"	v
+namespaceName	./ProtobufParser.php	/^            $namespaceName = $this->_createNamespaceName($descriptor);$/;"	v
+newLineStr	./CodeStringBuffer.php	/^        $this->newLineStr = $newLineString;$/;"	v
+newLineStr	./CodeStringBuffer.php	/^    protected $newLineStr = '';$/;"	v
+newLineString	./CodeStringBuffer.php	/^    public function __construct($tabString = ' ', $newLineString = PHP_EOL)$/;"	v
+newline	./CodeStringBuffer.php	/^    public function append($lines, $newline = false, $identOffset = 0)$/;"	v
+newline	./CodeStringBuffer.php	/^    public function newline()$/;"	f
+newline	./CommentStringBuffer.php	/^    public function append($line, $newline = false, $identOffset = 0)$/;"	v
+newline	./CommentStringBuffer.php	/^    public function newline()$/;"	f
+next	./ProtobufParser.php	/^            $next = ($this->_next($messageContent));$/;"	v
+offset	./ProtobufParser.php	/^                $offset = $offsetClose + 1;$/;"	v
+offset	./ProtobufParser.php	/^                $offset = $offsetOpen + 1;$/;"	v
+offset	./ProtobufParser.php	/^                $offset = $this->_getBeginEnd($messageContent, '{', '}');$/;"	v
+offset	./ProtobufParser.php	/^                $offset = -1;$/;"	v
+offset	./ProtobufParser.php	/^        $offset = $offsetBegin + 1;$/;"	v
+offsetBegin	./ProtobufParser.php	/^        $offsetBegin = strpos($string, $char);$/;"	v
+offsetClose	./ProtobufParser.php	/^            $offsetClose = strpos($string, $charend, $offset);$/;"	v
+offsetNumber	./ProtobufParser.php	/^        $offsetNumber = 1;$/;"	v
+offsetOpen	./ProtobufParser.php	/^            $offsetOpen = strpos($string, $char, $offset);$/;"	v
+optionError	./protoc-php.php	/^                $optionError = true;$/;"	v
+optionError	./protoc-php.php	/^    $optionError = false;$/;"	v
+ourdir	./ProtobufParser.php	/^    public function parse($sourceFile, $ourdir=null)$/;"	v
+outdir	./ProtobufParser.php	/^            $outdir = $this->_outdir;$/;"	v
+outdir	./ProtobufParser.php	/^        $outdir = $this->_outdir.DIRECTORY_SEPARATOR.$this->_createOutdir($descriptor);$/;"	v
+outdir	./protoc-php.php	/^                $outdir = $argv[$key+1];$/;"	v
+outputFile	./ProtobufParser.php	/^            $outputFile = $this->_createOutputFilename($file->getName());$/;"	v
+package	./ProtobufParser.php	/^        $package = $descriptor->getFile()->getPackage();$/;"	v
+package	./ProtobufParser.php	/^        $package = $file->getPackage();$/;"	v
+parent	./ProtobufParser.php	/^        FileDescriptor $file, $messageContent, MessageDescriptor $parent = null$/;"	v
+parse	./ProtobufParser.php	/^    public function parse($sourceFile, $ourdir=null)$/;"	f
+parser	./protoc-php.php	/^    $parser = new ProtobufParser($useNamespaces,$prefix,$outdir);$/;"	v
+parserKey	./ProtobufParser.php	/^                $parserKey = realpath($includedFilename);$/;"	v
+path	./ProtobufParser.php	/^        $path = $this->_createEmbeddedMessagePath($descriptor);$/;"	v
+path	./ProtobufParser.php	/^        $path = array();$/;"	v
+pathInfo	./ProtobufParser.php	/^        $pathInfo = pathinfo($sourceFilename);$/;"	v
+pbp	./ProtobufParser.php	/^                    $pbp = new ProtobufParser($this->_useNativeNamespaces,$this->_prefix,$this->_outdir);$/;"	v
+prefix	./ProtobufParser.php	/^        $prefix  = $this->_prefix;$/;"	v
+prefix	./ProtobufParser.php	/^        $prefix = $this->_createNamespaceName($descriptor);$/;"	v
+prefix	./ProtobufParser.php	/^        $prefix = $this->_prefix;$/;"	v
+prefix	./protoc-php.php	/^                $prefix = $argv[$key+1];$/;"	v
+prefixName	./ProtobufParser.php	/^        $prefixName = '';$/;"	v
+prefixString	./ProtobufParser.php	/^        $prefixString = $buffer->__toString();$/;"	v
+requiresString	./ProtobufParser.php	/^            $requiresString = 'namespace {' . PHP_EOL . $requiresString . PHP_EOL . '}';$/;"	v
+requiresString	./ProtobufParser.php	/^        $requiresString = '';$/;"	v
+reset	./ProtobufParser.php	/^            ->append('public function reset()')$/;"	f
+reset	./pb_proto_echo.php	/^    public function reset()$/;"	f
+set	./ProtobufParser.php	/^                'public function set' . $field->getCamelCaseName() .$/;"	f
+setDefault	./FieldDescriptor.php	/^    public function setDefault($default)$/;"	f
+setLabel	./FieldDescriptor.php	/^    public function setLabel($label)$/;"	f
+setMessage	./pb_proto_echo.php	/^    public function setMessage($value)$/;"	f
+setName	./FieldDescriptor.php	/^    public function setName($name)$/;"	f
+setName	./FileDescriptor.php	/^    public function setName($name)$/;"	f
+setNamespace	./FieldDescriptor.php	/^    public function setNamespace($namespace)$/;"	f
+setNestedMessage	./pb_proto_echo.php	/^    public function setNestedMessage(Ugc_Pb_Pack_Test_EchoRequest_NestedMessage $value)$/;"	f
+setNumber	./FieldDescriptor.php	/^    public function setNumber($number)$/;"	f
+setPackage	./FileDescriptor.php	/^    public function setPackage($package)$/;"	f
+setPrefix	./ProtobufParser.php	/^    public function setPrefix($prefix) {$/;"	f
+setType	./FieldDescriptor.php	/^    public function setType($type)$/;"	f
+setTypeDescriptor	./FieldDescriptor.php	/^    public function setTypeDescriptor($typeDescriptor)$/;"	f
+split	./ProtobufParser.php	/^            $split = preg_split('\/=\/', $match);$/;"	v
+string	./ProtobufParser.php	/^        $string = file_get_contents($sourceFile);$/;"	v
+string	./ProtobufParser.php	/^        $string = preg_replace('\/\\\/\\\/.*\/', '', $string);$/;"	v
+string	./ProtobufParser.php	/^        $string = preg_replace('\/\\\\r?\\\\n\\s*\/', PHP_EOL, $string);$/;"	v
+string	./ProtobufParser.php	/^        $string = trim($string);$/;"	v
+type	./ProtobufParser.php	/^                $type = $descriptor->findType($/;"	v
+type	./ProtobufParser.php	/^            $type = $this->_getType($field);$/;"	v
+typeName	./ProtobufParser.php	/^            $typeName = $field->getTypeName();$/;"	v
+typeName	./ProtobufParser.php	/^            $typeName = $this->_createClassName($field->getTypeDescriptor());$/;"	v
+useNamespaces	./protoc-php.php	/^                $useNamespaces = true;$/;"	v
+useNamespaces	./protoc-php.php	/^    $useNamespaces = false;$/;"	v

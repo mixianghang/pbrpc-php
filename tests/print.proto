@@ -1,0 +1,4 @@
+package nihao.wohao;
+message print {
+    optional string printStr = 1;
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto generated from echo.proto at 2015-03-06 20:06:29
+ * Auto generated from echo.proto at 2015-03-10 18:12:20
  *
  * pack.test package
  */

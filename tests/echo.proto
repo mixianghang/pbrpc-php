@@ -1,5 +1,6 @@
 //option cc_generic_services = true; //此选项置为true，protobuf会生成服务接口定义
 package pack.test;
+import "./print.proto";
  
 message EchoRequest{
   required string message = 1;
@@ -7,10 +8,15 @@ message EchoRequest{
       optional string message = 1;
   }
   optional Nested_Message nested_message = 2;
+  optional nihao.wohao.print printT = 3;
 }
 
 message EchoResponse{
   required string message = 1;
+}
+enum EnumTest{
+    NIHAO = 0;
+    WOHAO = 1;
 }
   
 //service EchoService{
