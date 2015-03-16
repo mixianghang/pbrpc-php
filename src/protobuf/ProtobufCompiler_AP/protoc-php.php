@@ -29,6 +29,13 @@ if (!debug_backtrace()) {
             case '-o' :
                 $outdir = $argv[$key+1];
                 break;
+            case '--help' :
+            case '-h'     :
+                echo '--prefix/-p set prefix for classname'.PHP_EOL;
+                echo '--outdir/-o set output directory for class files'.PHP_EOL;
+                echo '--outdir/-o set output directory for class files'.PHP_EOL;
+                echo '--help/-h set help information'.PHP_EOL;
+                break;
             default :
                 $optionError = true;
                 break;
@@ -36,9 +43,11 @@ if (!debug_backtrace()) {
     }
 
     if ($optionError) {
-        printf('USAGE: %s [OPTIONS] PROTO_FILE' . PHP_EOL, $argv[0]);
-        printf('  -n, --use-namespaces      Use native PHP namespaces' . PHP_EOL);
-        exit(1);
+        echo '--prefix/-p set prefix for classname'.PHP_EOL;
+        echo '--outdir/-o set output directory for class files'.PHP_EOL;
+        echo '--outdir/-o set output directory for class files'.PHP_EOL;
+        echo '--help/-h set help information'.PHP_EOL;
+        break;
     }
 
     $parser = new ProtobufParser($useNamespaces,$prefix,$outdir);
